@@ -17,7 +17,7 @@ def sendText(msg, driver):
         button = driver.find_element_by_xpath('//span[@data-icon="send"]')
         button.click()
     except:
-        print('mensagem')
+        print('Message not sent')
 
 msgSent=driver.find_elements_by_class_name('_3zb-j')
 lastMsg = msgSent[-1].text

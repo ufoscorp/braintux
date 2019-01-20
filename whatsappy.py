@@ -40,6 +40,8 @@ class Whatsappy:
         username = os.popen("whoami").read()
         username = str(username)[:len(username)-1]
 
+        time.sleep(2)
+
         self.sendMessage("{} connected your Jarvis named by {}.".format(username, self.name))
 
     def sendMessage(self, message):

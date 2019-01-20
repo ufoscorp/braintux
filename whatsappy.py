@@ -20,7 +20,7 @@ def sendText(msg, driver):
     if len(msg)>1:
         button = driver.find_element_by_xpath('//span[@data-icon="send"]')
         button.click()
-    except:
+    else:
         print('Empty messagee')
 
 def send_attachment(path):

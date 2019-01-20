@@ -94,7 +94,7 @@ while executing:
         if newMessage[0:5] == "/quit":
 
             whatsappy.sendMessage('Quitting...')
-            exit()
+            executing = False
 
 
         elif newMessage[0:6] == "/shell":
@@ -118,6 +118,10 @@ while executing:
         # the command list
         if command == "help":
             output = Help.text
+
+        if command == "quit":
+            puttingTitle("Quitting...")
+            exit()
 
         else:
             output = "Command doesn't exist!"

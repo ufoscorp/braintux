@@ -104,3 +104,159 @@ console.error: BroadcastService:
     remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
 
 [Child 9840, Chrome_ChildThread] WARNING: pipe error (3): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548015291730	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.7keqX6WGlO2x"
+
+(firefox:19217): Gtk-WARNING **: 18:14:51.767: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:19217): Gtk-WARNING **: 18:14:52.576: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:19217): Gtk-WARNING **: 18:14:52.576: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:19308): Gtk-WARNING **: 18:14:53.468: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548015294300	Marionette	INFO	Listening on port 42587
+1548015294338	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548015294380	Marionette	DEBUG	[2147483649] Frame script loaded
+1548015294386	Marionette	DEBUG	[2147483649] Frame script registered
+1548015294400	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+
+(/usr/lib/firefox/firefox:19375): Gtk-WARNING **: 18:14:54.483: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548015296029	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548015296169	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548015297379	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548015312964	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+1548015880877	Marionette	DEBUG	[2147483665] Frame script loaded
+1548015880886	Marionette	DEBUG	[2147483665] Frame script registered
+1548015880921	Marionette	DEBUG	[4294967297] Frame script loaded
+1548015880922	Marionette	DEBUG	[4294967297] Frame script registered
+
+(/usr/lib/firefox/firefox:23867): Gtk-WARNING **: 18:24:41.953: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548016633732	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.JMDpcVhoZ7KH"
+
+(firefox:29990): Gtk-WARNING **: 18:37:13.769: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:29990): Gtk-WARNING **: 18:37:14.794: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:29990): Gtk-WARNING **: 18:37:14.794: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:30081): Gtk-WARNING **: 18:37:15.762: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:30148): Gtk-WARNING **: 18:37:17.044: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548016637086	Marionette	INFO	Listening on port 40257
+1548016637144	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548016637199	Marionette	DEBUG	[2147483649] Frame script loaded
+1548016637204	Marionette	DEBUG	[2147483649] Frame script registered
+1548016637214	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548016638744	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548016638901	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548016640739	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548016648691	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+1548017123723	Marionette	DEBUG	[2147483665] Frame script loaded
+1548017123738	Marionette	DEBUG	[2147483665] Frame script registered
+1548017123764	Marionette	DEBUG	[4294967297] Frame script loaded
+1548017123764	Marionette	DEBUG	[4294967297] Frame script registered
+
+(/usr/lib/firefox/firefox:18509): Gtk-WARNING **: 18:45:24.805: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548017134812	Marionette	DEBUG	[4294967301] Frame script loaded
+1548017134816	Marionette	DEBUG	[4294967301] Frame script registered
+
+(/usr/lib/firefox/firefox:30148): dconf-WARNING **: 18:45:42.692: Unable to open /var/lib/flatpak/exports/share/dconf/profile/user: Permissão negada
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 18509, Chrome_ChildThread] WARNING: pipe error (3): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 30081, Chrome_ChildThread] WARNING: pipe error (3): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548018471348	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.jQCms9q1OSwY"
+
+(firefox:28653): Gtk-WARNING **: 19:07:51.386: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:28653): Gtk-WARNING **: 19:07:52.978: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:28653): Gtk-WARNING **: 19:07:52.978: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:28745): Gtk-WARNING **: 19:07:53.899: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548018474898	Marionette	INFO	Listening on port 36889
+1548018474977	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:28815): Gtk-WARNING **: 19:07:54.993: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548018475038	Marionette	DEBUG	[2147483649] Frame script loaded
+1548018475040	Marionette	DEBUG	[2147483649] Frame script registered
+1548018475050	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548018476444	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548018476658	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548018478001	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+1548019331398	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.WJnhQx9EKbrQ"
+
+(firefox:3945): Gtk-WARNING **: 19:22:12.351: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:3945): Gtk-WARNING **: 19:22:17.214: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:3945): Gtk-WARNING **: 19:22:17.214: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:4062): Gtk-WARNING **: 19:22:19.907: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:4130): Gtk-WARNING **: 19:22:22.540: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548019342823	Marionette	INFO	Listening on port 46085
+1548019342996	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548019343038	Marionette	DEBUG	[2147483649] Frame script loaded
+1548019343286	Marionette	DEBUG	[2147483649] Frame script registered
+1548019343365	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548019347668	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548019349089	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548019354144	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548019386198	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+
+(/usr/lib/firefox/firefox:22246): Gtk-WARNING **: 19:28:32.659: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+[Parent 3945, Gecko_IOThread] WARNING: pipe error (78): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548019716395	Marionette	INFO	Stopped listening on port 46085
+1548019740042	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.KBQRdn4RnBT1"
+
+(firefox:22404): Gtk-WARNING **: 19:29:00.084: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:22404): Gtk-WARNING **: 19:29:01.027: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:22404): Gtk-WARNING **: 19:29:01.027: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:22498): Gtk-WARNING **: 19:29:02.373: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548019743367	Marionette	INFO	Listening on port 36071
+
+(/usr/lib/firefox/firefox:22564): Gtk-WARNING **: 19:29:03.453: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548019743456	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548019743496	Marionette	DEBUG	[2147483649] Frame script loaded
+1548019743498	Marionette	DEBUG	[2147483649] Frame script registered
+1548019743515	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548019744947	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548019745165	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548019746387	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548019755923	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+[Parent 22404, Gecko_IOThread] WARNING: pipe error (65): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548024094864	Marionette	INFO	Stopped listening on port 36071

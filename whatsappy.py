@@ -58,17 +58,17 @@ class Whatsappy:
         time.sleep(1)
 
         # To send Videos and Images.
-        mediaButtons = driver.find_elements_by_class_name('GK4Lv')
+        mediaButtons = self.driver.find_elements_by_class_name('GK4Lv')
         mediaButtons[0].click()
-        keyboard.type(path)
-        keyboard.press(pynput.keyboard.Key.enter)
-        keyboard.release(pynput.keyboard.Key.enter)
+        self.keyboard.type(path)
+        self.keyboard.press(pynput.keyboard.Key.enter)
+        self.keyboard.release(pynput.keyboard.Key.enter)
         time.sleep(2)
-        keyboard.press(pynput.keyboard.Key.enter)
-        keyboard.release(pynput.keyboard.Key.enter)
+        self.keyboard.press(pynput.keyboard.Key.enter)
+        self.keyboard.release(pynput.keyboard.Key.enter)
         time.sleep(2)
-        keyboard.press(pynput.keyboard.Key.enter)
-        keyboard.release(pynput.keyboard.Key.enter)
+        self.keyboard.press(pynput.keyboard.Key.enter)
+        self.keyboard.release(pynput.keyboard.Key.enter)
 
 
  

@@ -1,8 +1,11 @@
+# Imports
 import os
 from whatsappy import Whatsappy
-
-from help import Help
+# Import fuctions
+from functions.help import Help
+from functions.quit import Quit
 Help = Help()
+Quit = Quit()
 
 def puttingTitle(title):
     os.system('clear')

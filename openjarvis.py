@@ -123,7 +123,7 @@ while executing:
         if command == "help":
             output = Help.text
 
-        if command == "quit":
+        elif command == "quit":
             puttingTitle("Quitting...")
             exit()
 

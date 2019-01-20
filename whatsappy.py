@@ -12,16 +12,12 @@ user.click()
 
 def sendText(msg, driver):
     msgBox = driver.find_element_by_xpath("//div[@spellcheck='true']")
-    for ch in msg:
-        if ch == "\n":
-            ActionChains(driver).key_down(Keys.SHIFT).key_down(Keys.ENTER).key_up(Keys.ENTER).key_up(Keys.SHIFT).key_up(Keys.BACKSPACE).perform()
-        else:
-            msgBox.send_keys(ch)
+    msgBox.send_keys(msg)
     try:
         button = driver.find_element_by_xpath('//span[@data-icon="send"]')
         button.click()
     except:
-        print('mensagem vazia')
+        print('mensagem')
 
 msgSent=driver.find_elements_by_class_name('_3zb-j')
 lastMsg = msgSent[-1].text

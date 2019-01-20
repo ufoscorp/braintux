@@ -28,7 +28,7 @@ def textInput(question):
     if answer != "":
         return answer
     else:
-        textInput(question + "\n (PLEASE, TYPE SOMETHING)")
+        return textInput(question + "\n (PLEASE, TYPE SOMETHING)")
 
 def multipleChoice(question, choicesInText):
     
@@ -46,9 +46,9 @@ def multipleChoice(question, choicesInText):
         if int(answer) < len(choices):
             return choices[int(answer)]
         else:
-            multipleChoice(question + "\n (CHOOSE A VALID NUMBER)", choicesInText)
+            return multipleChoice(question + "\n (CHOOSE A VALID NUMBER)", choicesInText)
     else:
-        multipleChoice(question + "\n (CHOOSE A NUMBER)", choicesInText)
+        return multipleChoice(question + "\n (CHOOSE A NUMBER)", choicesInText)
 
 wantWhatsappy = multipleChoice(
     "You can control your Jarvis by your cellphone, using the Whatsapp Web. Do you want?",

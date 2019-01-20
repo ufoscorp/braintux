@@ -30,7 +30,8 @@ while executing:
     elif '/command' in lastMsg:
         commandOutput = os.popen(lastMsg[8:]).read()
         sendText('Executando comando {}'.format(lastMsg[8:]), driver)
-        print(commandOutput)
+        commandOutput = str(commandOutput)
+        sendText(commandOutput, driver)
     elif lastMsg=='/quit':
         sendText('Quitting...', driver)
         executing=False

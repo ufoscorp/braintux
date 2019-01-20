@@ -94,6 +94,7 @@ while executing:
         if newMessage[0:5] == "/quit":
 
             whatsappy.sendMessage('Quitting...')
+            exit()
 
 
         elif newMessage[0:6] == "/shell":

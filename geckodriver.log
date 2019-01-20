@@ -47,3 +47,60 @@ console.error: BroadcastService:
     remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
 
 [Child 20038, Chrome_ChildThread] WARNING: pipe error (3): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548006400434	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.xSohF0XWgYl4"
+
+(firefox:674): Gtk-WARNING **: 15:46:40.473: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:674): Gtk-WARNING **: 15:46:42.153: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:674): Gtk-WARNING **: 15:46:42.153: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:776): Gtk-WARNING **: 15:46:43.310: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548006404274	Marionette	INFO	Listening on port 38581
+
+(/usr/lib/firefox/firefox:847): Gtk-WARNING **: 15:46:44.367: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548006404371	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548006404430	Marionette	DEBUG	[2147483649] Frame script loaded
+1548006404431	Marionette	DEBUG	[2147483649] Frame script registered
+1548006404443	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548006405884	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548006406030	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548006407167	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548006421847	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+1548007299167	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Hdq66bD3ic8r"
+
+(firefox:9747): Gtk-WARNING **: 16:01:39.211: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:9747): Gtk-WARNING **: 16:01:43.669: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:9747): Gtk-WARNING **: 16:01:43.669: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:9840): Gtk-WARNING **: 16:01:45.898: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:9912): Gtk-WARNING **: 16:01:48.126: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548007308169	Marionette	INFO	Listening on port 39799
+1548007308217	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548007308261	Marionette	DEBUG	[2147483649] Frame script loaded
+1548007308262	Marionette	DEBUG	[2147483649] Frame script registered
+1548007308274	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548007309740	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548007309896	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548007311075	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548007322063	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+[Child 9840, Chrome_ChildThread] WARNING: pipe error (3): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353

@@ -104,7 +104,11 @@ while executing:
             output = os.popen(shellCommand).read()
             output = str(output)
             whatsappy.sendMessage('Command output -> \n' + output)
-
+            
+        elif newMessage[0:5] == "/send":
+            
+            whatsappy.send_attachment(newMessage[6:])
+            
         elif newMessage[0:4] == "/cmd":
 
             command = newMessage[5:]

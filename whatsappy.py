@@ -2,6 +2,10 @@ from selenium import webdriver
 import os
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+from pynput.keyboard import Key, Controller
+import pynput
+import time
+keyboard = Controller()
 
 driver = webdriver.Chrome()
 driver.get("https://web.whatsapp.com")
@@ -13,11 +17,28 @@ user.click()
 def sendText(msg, driver):
     msgBox = driver.find_element_by_xpath("//div[@spellcheck='true']")
     msgBox.send_keys(msg)
-    try:
+    if len(msg)>1:
         button = driver.find_element_by_xpath('//span[@data-icon="send"]')
         button.click()
     except:
-        print('Message not sent')
+        print('Empty messagee')
+
+def send_attachment(path):
+    global driver
+    # Attachment Drop Down Menu
+    clipButton = driver.find_element_by_xpath('//*[@id="main"]/header/div[3]/div/div[2]/div/span')
+    clipButton.click()
+    time.sleep(1)
+
+    # To send Videos and Images.
+    mediaButton = driver.find_element_by_xpath('//*[@id="main"]/header/div[3]/div/div[2]/span/div/div/ul/li[1]/button')
+    mediaButton.click()
+    keyboard.type(path)
+    keyboard.press(pynput.keyboard.Key.enter)
+    keyboard.release(pynput.keyboard.Key.enter)
+    keyboard.press(pynput.keyboard.Key.enter)
+    keyboard.release(pynput.keyboard.Key.enter)
+
 
 msgSent=driver.find_elements_by_class_name('_3zb-j')
 lastMsg = msgSent[-1].text

@@ -1,5 +1,7 @@
 from selenium import webdriver
 import os
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome()
 driver.get("https://web.whatsapp.com")
@@ -10,9 +12,16 @@ user.click()
 
 def sendText(msg, driver):
     msgBox = driver.find_element_by_xpath("//div[@spellcheck='true']")
-    msgBox.send_keys(msg)
-    button = driver.find_element_by_xpath('//span[@data-icon="send"]')
-    button.click()
+    for ch in msg:
+        if ch == "\n":
+            ActionChains(driver).key_down(Keys.SHIFT).key_down(Keys.ENTER).key_up(Keys.ENTER).key_up(Keys.SHIFT).key_up(Keys.BACKSPACE).perform()
+        else:
+            msgBox.send_keys(ch)
+    try:
+        button = driver.find_element_by_xpath('//span[@data-icon="send"]')
+        button.click()
+    except:
+        print('mensagem vazia')
 
 msgSent=driver.find_elements_by_class_name('_3zb-j')
 lastMsg = msgSent[-1].text
@@ -27,10 +36,10 @@ while executing:
     if lastMsg=='/ping google':
         os.system('ping google.com')
         sendText('Pingando google', driver)
-    elif '/command' in lastMsg:
+    elif '/command' in lastMsg[0:8]:
         commandOutput = os.popen(lastMsg[8:]).read()
         sendText('Executando comando {}'.format(lastMsg[8:]), driver)
-        commandOutput = str(commandOutput).replace('\n', '')
+        commandOutput = str(commandOutput)
         sendText(commandOutput, driver)
     elif lastMsg=='/quit':
         sendText('Quitting...', driver)

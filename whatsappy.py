@@ -49,22 +49,29 @@ class Whatsappy:
             message = self.name + ": \n" + message + "\n"
             textBox.send_keys(message)
             
-
+    
     def send_attachment(self, path):
 
         # Attachment Drop Down Menu
-        clipButton = self.driver.find_element_by_xpath('//*[@id="main"]/header/div[3]/div/div[2]/div/span')
+        clipButton = self.driver.find_element_by_xpath('//span[@data-icon="clip"]')
         clipButton.click()
         time.sleep(1)
 
-        # To send Videos and Images
-        mediaButton = self.driver.find_element_by_xpath('//*[@id="main"]/header/div[3]/div/div[2]/span/div/div/ul/li[1]/button')
-        mediaButton.click()
-        self.keyboard.type(path)
-        self.keyboard.press(pynput.keyboard.Key.enter)
-        self.keyboard.release(pynput.keyboard.Key.enter)
-        self.keyboard.press(pynput.keyboard.Key.enter)
-        self.keyboard.release(pynput.keyboard.Key.enter)
+        # To send Videos and Images.
+        mediaButtons = driver.find_elements_by_class_name('GK4Lv')
+        mediaButtons[0].click()
+        keyboard.type(path)
+        keyboard.press(pynput.keyboard.Key.enter)
+        keyboard.release(pynput.keyboard.Key.enter)
+        time.sleep(2)
+        keyboard.press(pynput.keyboard.Key.enter)
+        keyboard.release(pynput.keyboard.Key.enter)
+        time.sleep(2)
+        keyboard.press(pynput.keyboard.Key.enter)
+        keyboard.release(pynput.keyboard.Key.enter)
+
+
+ 
 
     def checkNewMessage(self):
 

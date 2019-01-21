@@ -67,7 +67,7 @@ class Whatsappy:
     def send_attachment(self, path):
 
         # Attachment Drop Down Menu
-        clipButton = self.driver.find_element_by_xpath('//span[@data-icon="clip"]')
+        clipButton = self.driver.find_element_by_xpath('//div[@title="Anexar"]')
         clipButton.click()
         time.sleep(1)
 

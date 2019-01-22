@@ -1,6 +1,7 @@
-# Imports
+#Imports
 from selenium import webdriver
 import os
+import urllib.request
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from pynput.keyboard import Key, Controller
@@ -84,9 +85,15 @@ class Whatsappy:
         self.keyboard.press(pynput.keyboard.Key.enter)
         self.keyboard.release(pynput.keyboard.Key.enter)
 
-
     # Checking if have a new message
     def checkNewMessage(self):
+
+        # Catching all the audios
+        audios = self.driver.find_elements_by_tag_name('audio')
+        if len(audios) != 0:
+            lastAudio = audios[-1].get_attribute('src')
+            urllib.request.urlretrieve(lastAudio, os.getcwd()+'/tempfile.mp3')
+
 
         # Catching all the messages
         messages = self.driver.find_elements_by_class_name('_3zb-j')

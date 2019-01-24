@@ -7,6 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from pynput.keyboard import Key, Controller
 import pynput
 import time
+import speech_recognition as sr
 
 class Whatsappy:
 
@@ -25,7 +26,14 @@ class Whatsappy:
             self.driver = webdriver.Chrome()
 
         elif browser == "Firefox":
-            self.driver = webdriver.Firefox()
+
+            profile = webdriver.FirefoxProfile()
+            profile.set_preference("browser.download.folderList", 2)
+            profile.set_preference("browser.download.manager.showWhenStarting", False)
+            profile.set_preference("browser.download.dir", 'audios')
+            profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "audio/ogg")
+
+            self.driver = webdriver.Firefox(firefox_profile=profile)
 
         else:
             print("Error! This browser don't exist in our list.")
@@ -90,15 +98,27 @@ class Whatsappy:
     def checkNewMessage(self):
 
         # Catching all the audios (don't work)
-        '''
+        
         audios = self.driver.find_elements_by_class_name('_2jfIu')
         if len(audios) != 0:
             ActionChains(self.driver).move_to_element(audios[-1]).perform()
-            optionsButton = self.driver.find_element_by_xpath('//span[@data-icon="down-context"]')
-            optionsButton.click()
+            optionsButton = self.driver.find_elements_by_xpath('//div[@data-js-context-icon="true"]')
+            optionsButton[-1].click()
             downloadButton = self.driver.find_element_by_xpath("//div[@title='Baixar']")
             downloadButton.click()
-        '''
+
+            os.system("ffmpeg -i audios/* audios/audio.wav")
+
+            r = sr.Recognizer()
+            with sr.AudioFile("audios/audio.wav") as source:
+                audio = r.record(source)
+
+            try:
+                audioSpeech = r.recognize_google(audio)
+            except Exception as e:
+                print("Exception: "+str(e))
+                exit()
+        
 
         # Catching all the messages
         messages = self.driver.find_elements_by_class_name('_3zb-j')

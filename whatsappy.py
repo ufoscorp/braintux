@@ -1,6 +1,7 @@
 # Imports
 from selenium import webdriver
 import os
+import urllib.request
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from pynput.keyboard import Key, Controller
@@ -15,6 +16,7 @@ class Whatsappy:
         self.keyboard = Controller()
         # Creating a variable to the lastMessage
         self.lastMessage = ""
+        self.lastAudio = ""
         # Receiving the name
         self.name = name
 
@@ -67,7 +69,7 @@ class Whatsappy:
     def send_attachment(self, path):
 
         # Attachment Drop Down Menu
-        clipButton = self.driver.find_element_by_xpath('//span[@data-icon="clip"]')
+        clipButton = self.driver.find_element_by_xpath('//div[@title="Anexar"]')
         clipButton.click()
         time.sleep(1)
 
@@ -84,16 +86,26 @@ class Whatsappy:
         self.keyboard.press(pynput.keyboard.Key.enter)
         self.keyboard.release(pynput.keyboard.Key.enter)
 
-
     # Checking if have a new message
     def checkNewMessage(self):
+
+        # Catching all the audios (don't work)
+        '''
+        audios = self.driver.find_elements_by_class_name('_2jfIu')
+        if len(audios) != 0:
+            ActionChains(self.driver).move_to_element(audios[-1]).perform()
+            optionsButton = self.driver.find_element_by_xpath('//span[@data-icon="down-context"]')
+            optionsButton.click()
+            downloadButton = self.driver.find_element_by_xpath("//div[@title='Baixar']")
+            downloadButton.click()
+        '''
 
         # Catching all the messages
         messages = self.driver.find_elements_by_class_name('_3zb-j')
         # Supposed new message is the last message
         newMessage = messages[-1].text
 
-        # Checking if the new message isn't igual to the last message
+        # Checking if the new message isn't iqual to the last message
         if newMessage != self.lastMessage:
             # We have a new message
             self.lastMessage = newMessage

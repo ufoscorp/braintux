@@ -260,3 +260,838 @@ console.error: BroadcastService:
 
 [Parent 22404, Gecko_IOThread] WARNING: pipe error (65): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
 1548024094864	Marionette	INFO	Stopped listening on port 36071
+1548024515836	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.KL8X2oJVVKnC"
+
+(firefox:12777): Gtk-WARNING **: 20:48:35.876: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:12777): Gtk-WARNING **: 20:48:37.170: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:12777): Gtk-WARNING **: 20:48:37.170: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:12872): Gtk-WARNING **: 20:48:38.100: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548024518967	Marionette	INFO	Listening on port 42191
+1548024519055	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548024519128	Marionette	DEBUG	[2147483649] Frame script loaded
+1548024519131	Marionette	DEBUG	[2147483649] Frame script registered
+
+(/usr/lib/firefox/firefox:12937): Gtk-WARNING **: 20:48:39.151: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548024519160	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548024520478	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548024520657	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548024522346	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548024534594	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+[Parent 12777, Gecko_IOThread] WARNING: pipe error (65): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548024854748	Marionette	INFO	Stopped listening on port 42191
+1548024863876	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.vna0LnhbDJlc"
+
+(firefox:13248): Gtk-WARNING **: 20:54:23.918: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:13248): Gtk-WARNING **: 20:54:24.721: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:13248): Gtk-WARNING **: 20:54:24.721: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:13343): Gtk-WARNING **: 20:54:25.618: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548024866455	Marionette	INFO	Listening on port 34035
+1548024866491	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548024866532	Marionette	DEBUG	[2147483649] Frame script loaded
+1548024866533	Marionette	DEBUG	[2147483649] Frame script registered
+1548024866551	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+
+(/usr/lib/firefox/firefox:13412): Gtk-WARNING **: 20:54:26.618: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548024868138	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548024868300	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548024869819	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548024878026	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+
+(/usr/lib/firefox/firefox:14850): Gtk-WARNING **: 20:56:54.152: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+###!!! [Parent][DispatchAsyncMessage] Error: PClientHandle::Msg_PClientHandleOpConstructor Route error: message sent to unknown actor ID
+
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+[Parent 13248, Gecko_IOThread] WARNING: pipe error (65): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548025285131	Marionette	INFO	Stopped listening on port 34035
+1548025441397	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.inTIKB4VZrM5"
+
+(firefox:15370): Gtk-WARNING **: 21:04:01.487: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:15370): Gtk-WARNING **: 21:04:03.197: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:15370): Gtk-WARNING **: 21:04:03.197: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:15463): Gtk-WARNING **: 21:04:04.205: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548025445312	Marionette	INFO	Listening on port 39699
+
+(/usr/lib/firefox/firefox:15542): Gtk-WARNING **: 21:04:05.427: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548025445433	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548025445510	Marionette	DEBUG	[2147483649] Frame script loaded
+1548025445511	Marionette	DEBUG	[2147483649] Frame script registered
+1548025445538	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548025447275	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548025447453	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548025449293	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548025469827	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548025522206	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548025523725	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+[Parent 15370, Gecko_IOThread] WARNING: pipe error (58): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548026495619	Marionette	INFO	Stopped listening on port 39699
+1548132432038	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ShcmNdsEZ5ae"
+
+(firefox:18793): Gtk-WARNING **: 02:47:12.793: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:18793): Gtk-WARNING **: 02:47:16.166: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:18793): Gtk-WARNING **: 02:47:16.166: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:18906): Gtk-WARNING **: 02:47:17.810: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:18976): Gtk-WARNING **: 02:47:20.054: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548132440331	Marionette	INFO	Listening on port 41237
+1548132440473	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548132440521	Marionette	DEBUG	[2147483649] Frame script loaded
+1548132440753	Marionette	DEBUG	[2147483649] Frame script registered
+1548132440824	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548132442881	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548132444458	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548132450662	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548132467252	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+[Parent 18793, Gecko_IOThread] WARNING: pipe error (47): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548132960571	Marionette	INFO	Stopped listening on port 41237
+1548133367823	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.xzvHt87STpeT"
+
+(firefox:2771): Gtk-WARNING **: 03:02:47.865: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:2771): Gtk-WARNING **: 03:02:49.610: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:2771): Gtk-WARNING **: 03:02:49.610: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:2860): Gtk-WARNING **: 03:02:50.676: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:2931): Gtk-WARNING **: 03:02:51.936: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548133372005	Marionette	INFO	Listening on port 44983
+1548133372039	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548133372091	Marionette	DEBUG	[2147483649] Frame script loaded
+1548133372092	Marionette	DEBUG	[2147483649] Frame script registered
+1548133372101	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548133375712	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548133376043	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548133377960	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548133390316	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133469381	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133470712	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133526927	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133528234	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133574812	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133576046	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133584735	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133585984	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.007: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.007: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.008: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.008: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.008: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.009: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.009: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.010: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.011: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.011: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.012: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.012: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.013: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.013: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.014: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.015: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.017: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.018: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.018: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.023: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.024: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.024: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+
+(firefox:2771): Gtk-CRITICAL **: 03:06:26.024: gtk_tree_model_get_iter_first: assertion 'GTK_IS_TREE_MODEL (tree_model)' failed
+1548133639760	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133641085	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133717649	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133718915	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133748176	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548133749428	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+[Parent 2771, Gecko_IOThread] WARNING: pipe error (65): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548133972418	Marionette	INFO	Stopped listening on port 44983
+1548148097074	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.VPR75y3yqfe0"
+
+(firefox:10647): Gtk-WARNING **: 07:08:18.068: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:10647): Gtk-WARNING **: 07:08:22.062: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:10647): Gtk-WARNING **: 07:08:22.062: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:10780): Gtk-WARNING **: 07:08:24.176: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:10851): Gtk-WARNING **: 07:08:26.811: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548148107071	Marionette	INFO	Listening on port 45673
+1548148107142	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548148107212	Marionette	DEBUG	[2147483649] Frame script loaded
+1548148107273	Marionette	DEBUG	[2147483649] Frame script registered
+1548148107577	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548148110625	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548148111787	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548148115050	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548148128706	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[Parent 10647, Gecko_IOThread] WARNING: pipe error (71): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548148200383	Marionette	INFO	Stopped listening on port 45673
+1548148205541	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.PHia9fNLHXmA"
+
+(firefox:11185): Gtk-WARNING **: 07:10:05.619: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:11185): Gtk-WARNING **: 07:10:06.889: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:11185): Gtk-WARNING **: 07:10:06.889: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:11271): Gtk-WARNING **: 07:10:08.562: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:11347): Gtk-WARNING **: 07:10:10.568: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548148210606	Marionette	INFO	Listening on port 37329
+1548148210663	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548148210723	Marionette	DEBUG	[2147483649] Frame script loaded
+1548148210727	Marionette	DEBUG	[2147483649] Frame script registered
+1548148210738	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548148214324	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548148214569	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548148216790	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548148227722	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+[Parent 11185, Gecko_IOThread] WARNING: pipe error (65): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548148277697	Marionette	INFO	Stopped listening on port 37329
+1548148285397	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ene2LPTOMaTS"
+
+(firefox:11581): Gtk-WARNING **: 07:11:25.483: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:11581): Gtk-WARNING **: 07:11:26.605: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:11581): Gtk-WARNING **: 07:11:26.606: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:11673): Gtk-WARNING **: 07:11:28.011: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548148289158	Marionette	INFO	Listening on port 32949
+1548148289218	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548148289271	Marionette	DEBUG	[2147483649] Frame script loaded
+1548148289285	Marionette	DEBUG	[2147483649] Frame script registered
+
+(/usr/lib/firefox/firefox:11747): Gtk-WARNING **: 07:11:29.299: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548148289308	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548148290752	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548148291833	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548148293734	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548148306567	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+
+(/usr/lib/firefox/firefox:12010): Gtk-WARNING **: 07:12:28.084: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+[Child 11747, Chrome_ChildThread] WARNING: pipe error (3): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 11581, Gecko_IOThread] WARNING: pipe error (58): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548148351388	Marionette	INFO	Stopped listening on port 32949
+1548148426532	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.CzvLqOPagcpI"
+
+(firefox:12175): Gtk-WARNING **: 07:13:46.596: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:12175): Gtk-WARNING **: 07:13:49.546: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:12175): Gtk-WARNING **: 07:13:49.546: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:12269): Gtk-WARNING **: 07:13:52.048: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:12340): Gtk-WARNING **: 07:13:53.227: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548148433266	Marionette	INFO	Listening on port 39681
+1548148433356	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548148433419	Marionette	DEBUG	[2147483649] Frame script loaded
+1548148433420	Marionette	DEBUG	[2147483649] Frame script registered
+1548148433431	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548148434740	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548148434994	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548148437019	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548148451694	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548148564331	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.PuxptwQcJdR8"
+
+(firefox:12611): Gtk-WARNING **: 07:16:04.415: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:12611): Gtk-WARNING **: 07:16:05.578: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:12611): Gtk-WARNING **: 07:16:05.578: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:12703): Gtk-WARNING **: 07:16:06.577: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548148567624	Marionette	INFO	Listening on port 44099
+1548148567650	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548148567694	Marionette	DEBUG	[2147483649] Frame script loaded
+1548148567695	Marionette	DEBUG	[2147483649] Frame script registered
+
+(/usr/lib/firefox/firefox:12774): Gtk-WARNING **: 07:16:07.759: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548148601175	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548148603099	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548148603333	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548148604897	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548148705247	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+[Parent 12175, Gecko_IOThread] WARNING: pipe error (68): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548148846237	Marionette	INFO	Stopped listening on port 39681
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+1548149060193	Marionette	DEBUG	[2147483665] Frame script loaded
+1548149060204	Marionette	DEBUG	[2147483665] Frame script registered
+1548149060235	Marionette	DEBUG	[4294967297] Frame script loaded
+1548149060235	Marionette	DEBUG	[4294967297] Frame script registered
+
+(/usr/lib/firefox/firefox:13439): Gtk-WARNING **: 07:24:21.318: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548149454081	Marionette	INFO	Stopped listening on port 44099
+1548170585114	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Sen7D3ozXZtF"
+
+(firefox:4414): Gtk-WARNING **: 13:23:05.911: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:4414): Gtk-WARNING **: 13:23:09.425: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:4414): Gtk-WARNING **: 13:23:09.425: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:4535): Gtk-WARNING **: 13:23:11.642: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:4610): Gtk-WARNING **: 13:23:15.525: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548170595778	Marionette	INFO	Listening on port 45243
+1548170595811	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548170595850	Marionette	DEBUG	[2147483649] Frame script loaded
+1548170595953	Marionette	DEBUG	[2147483649] Frame script registered
+1548170596367	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548170597626	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548170599735	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548170634878	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548170635508	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+
+(/usr/lib/firefox/firefox:9265): Gtk-WARNING **: 13:24:56.619: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+[Parent 4414, Gecko_IOThread] WARNING: pipe error (47): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548170787306	Marionette	INFO	Stopped listening on port 45243
+1548175379868	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.0bhRJ0H0DKUC"
+
+(firefox:14019): Gtk-WARNING **: 14:42:59.914: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:14019): Gtk-WARNING **: 14:43:01.004: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:14019): Gtk-WARNING **: 14:43:01.004: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:14125): Gtk-WARNING **: 14:43:02.072: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548175383060	Marionette	INFO	Listening on port 44411
+1548175383084	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548175383125	Marionette	DEBUG	[2147483649] Frame script loaded
+1548175383126	Marionette	DEBUG	[2147483649] Frame script registered
+1548175383180	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+
+(/usr/lib/firefox/firefox:14194): Gtk-WARNING **: 14:43:03.193: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548175384666	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548175384863	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548175387340	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548175402311	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: (new TypeError("currentPanel is undefined", "resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/toolbox.js", 2788))
+console.error: (new TypeError("this.win is null", "resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/markup/views/markup-container.js", 58))
+[Parent 14019, Gecko_IOThread] WARNING: pipe error (65): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548175451909	Marionette	INFO	Stopped listening on port 44411
+1548175783393	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.PlWshWLwCidb"
+
+(firefox:14755): Gtk-WARNING **: 14:49:43.443: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:14755): Gtk-WARNING **: 14:49:44.242: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:14755): Gtk-WARNING **: 14:49:44.242: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:14847): Gtk-WARNING **: 14:49:45.484: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:14912): Gtk-WARNING **: 14:49:46.782: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548175786823	Marionette	INFO	Listening on port 35217
+1548175786908	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548175786962	Marionette	DEBUG	[2147483649] Frame script loaded
+1548175786962	Marionette	DEBUG	[2147483649] Frame script registered
+1548175786974	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548175818363	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548175818546	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548175820352	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548175830440	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+[Parent 14755, Gecko_IOThread] WARNING: pipe error (58): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548175861618	Marionette	INFO	Stopped listening on port 35217
+1548175982344	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.w7tjWPqj6LqX"
+
+(firefox:15360): Gtk-WARNING **: 14:53:02.389: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:15360): Gtk-WARNING **: 14:53:03.626: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:15360): Gtk-WARNING **: 14:53:03.626: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:15462): Gtk-WARNING **: 14:53:04.949: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:15532): Gtk-WARNING **: 14:53:06.140: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548175986203	Marionette	INFO	Listening on port 43167
+1548175986264	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548175986318	Marionette	DEBUG	[2147483649] Frame script loaded
+1548175986319	Marionette	DEBUG	[2147483649] Frame script registered
+1548175986332	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548175987947	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548175988169	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548175989451	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548176000487	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548176003881	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+[Parent 15360, Gecko_IOThread] WARNING: pipe error (123): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 15360, Gecko_IOThread] WARNING: pipe error (65): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548176046496	Marionette	INFO	Stopped listening on port 43167
+1548176070068	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ZR0z3HxYiA0g"
+
+(firefox:15808): Gtk-WARNING **: 14:54:30.111: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:15808): Gtk-WARNING **: 14:54:31.018: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:15808): Gtk-WARNING **: 14:54:31.018: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:15899): Gtk-WARNING **: 14:54:32.025: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548176073093	Marionette	INFO	Listening on port 42555
+1548176073187	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:15966): Gtk-WARNING **: 14:54:33.192: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548176073240	Marionette	DEBUG	[2147483649] Frame script loaded
+1548176073241	Marionette	DEBUG	[2147483649] Frame script registered
+1548176127692	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548176128430	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548176129224	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548176171150	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548176191614	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548176348800	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548176352241	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548176353099	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548176353958	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: "TypeError: currentNode is undefined: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11\nonMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: currentNode is undefined: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11
+onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+console.error: "TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\n_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+console.error: "TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\n_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+1548176503226	Marionette	INFO	Stopped listening on port 42555
+1548176521215	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.a7ssBEzXHiCC"
+
+(firefox:18293): Gtk-WARNING **: 15:02:01.261: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:18293): Gtk-WARNING **: 15:02:02.183: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:18293): Gtk-WARNING **: 15:02:02.183: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:18387): Gtk-WARNING **: 15:02:03.434: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548176524453	Marionette	INFO	Listening on port 34151
+1548176524556	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:18459): Gtk-WARNING **: 15:02:04.571: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548176524601	Marionette	DEBUG	[2147483649] Frame script loaded
+1548176524602	Marionette	DEBUG	[2147483649] Frame script registered
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+1548178445313	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548178446595	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548178447628	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548178478281	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548178534953	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+[Parent 18293, Gecko_IOThread] WARNING: pipe error (68): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548178671490	Marionette	INFO	Stopped listening on port 34151
+1548188439168	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.KqagJeniXPyS"
+
+(firefox:23928): Gtk-WARNING **: 18:20:39.222: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548188439325	addons.manager	WARN	Failed to copy the application shipped blocklist to the profile: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIFile.copyTo]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://gre/modules/AddonManager.jsm :: validateBlocklist :: line 575"  data: no] Stack trace: validateBlocklist()@resource://gre/modules/AddonManager.jsm:575
+startup()@resource://gre/modules/AddonManager.jsm:729
+startup()@resource://gre/modules/AddonManager.jsm:2811
+observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:66
+
+(firefox:23928): Gtk-WARNING **: 18:20:45.434: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:23928): Gtk-WARNING **: 18:20:45.434: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:24027): Gtk-WARNING **: 18:20:50.959: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(/usr/lib/firefox/firefox:24095): Gtk-WARNING **: 18:20:53.538: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548188453585	Marionette	INFO	Listening on port 46785
+1548188453646	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548188453689	Marionette	DEBUG	[2147483649] Frame script loaded
+1548188453696	Marionette	DEBUG	[2147483649] Frame script registered
+1548188469703	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548188469770	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548188469783	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548188470751	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for about:neterror?e=dnsNotFound&u=https%3A//web.whatsapp.com.br/&c=UTF-8&f=regular&d=N%C3%A3o%20conseguimos%20conectar%20com%20o%20servidor%20em%20web.whatsapp.com.br.
+1548188493688	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:neterror?e=dnsNotFound&u=https%3A//web.whatsapp.com.br/&c=UTF-8&f=regular&d=N%C3%A3o%20conseguimos%20conectar%20com%20o%20servidor%20em%20web.whatsapp.com.br.
+1548188494442	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:neterror?e=dnsNotFound&u=https%3A//web.whatsapp.com.br/&c=UTF-8&f=regular&d=N%C3%A3o%20conseguimos%20conectar%20com%20o%20servidor%20em%20web.whatsapp.com.br.
+1548188494444	Marionette	DEBUG	[2147483649] Received DOM event unload for about:neterror?e=dnsNotFound&u=https%3A//web.whatsapp.com.br/&c=UTF-8&f=regular&d=N%C3%A3o%20conseguimos%20conectar%20com%20o%20servidor%20em%20web.whatsapp.com.br.
+1548188494612	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548188496502	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1548188729030	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548188804849	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1548188814142	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+1548188837409	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+[Parent 23928, Gecko_IOThread] WARNING: pipe error (70): Conexão fechada pela outra ponta: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1548188889161	Marionette	INFO	Stopped listening on port 46785
+1548189306177	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.IRfjeguaEJB9"
+
+(firefox:24834): Gtk-WARNING **: 18:35:06.227: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:24834): Gtk-WARNING **: 18:35:07.983: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:24834): Gtk-WARNING **: 18:35:07.983: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:24924): Gtk-WARNING **: 18:35:09.038: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548189309975	Marionette	INFO	Listening on port 42977
+1548189310005	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548189310050	Marionette	DEBUG	[2147483649] Frame script loaded
+1548189310077	Marionette	DEBUG	[2147483649] Frame script registered
+
+(/usr/lib/firefox/firefox:24989): Gtk-WARNING **: 18:35:10.092: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548189315798	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548189316932	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548189318086	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548189358740	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+console.error: "TypeError: currentNode is undefined: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11\nonMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: currentNode is undefined: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11
+onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+console.error: "TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\n_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+1548198197886	Marionette	INFO	Stopped listening on port 42977
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1548198991051	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.hTZUIhiEDT44"
+
+(firefox:31583): Gtk-WARNING **: 21:16:31.094: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+
+(firefox:31583): Gtk-WARNING **: 21:16:32.044: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:31583): Gtk-WARNING **: 21:16:32.044: Theme parsing error: <data>:1:76: Expected ')' in color definition
+
+(/usr/lib/firefox/firefox:31676): Gtk-WARNING **: 21:16:33.225: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548198994372	Marionette	INFO	Listening on port 42897
+1548198994466	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:31740): Gtk-WARNING **: 21:16:34.476: Theme parsing error: gtk.css:4351:28: 'none' is not a valid color name
+1548198994520	Marionette	DEBUG	[2147483649] Frame script loaded
+1548198994521	Marionette	DEBUG	[2147483649] Frame script registered
+1548199003945	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1548199004396	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1548199004967	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1548199036638	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:711:13
+
+console.error: "TypeError: currentNode is undefined: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11\nonMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: currentNode is undefined: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11
+onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+console.error: "TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\n_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+console.error: "TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\n_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+console.error: "TypeError: currentNode is undefined: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11\nonMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: currentNode is undefined: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11
+onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+console.error: "TypeError: currentNode is undefined: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11\nonMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: currentNode is undefined: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11
+onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+console.error: "TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\n_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+console.error: "TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\n_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+console.error: "TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\n_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: this.onSelected is not a function: onDetachedFront@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/computed/computed.js:1461:5
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+_onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/framework/selection.js:105:7
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null

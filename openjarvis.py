@@ -1,6 +1,7 @@
 # Imports
 import os
 from whatsappy import Whatsappy
+from pocketsphinx import AudioFile
 # Import fuctions
 from functions.help import Help
 from functions.quit import Quit
@@ -52,6 +53,8 @@ def multipleChoice(question, choicesInText):
             return multipleChoice(question + "\n (CHOOSE A VALID NUMBER)", choicesInText)
     else:
         return multipleChoice(question + "\n (CHOOSE A NUMBER)", choicesInText)
+
+
 
 wantWhatsappy = multipleChoice(
     "You can control your Jarvis by your cellphone, using the Whatsapp Web. Do you want?",

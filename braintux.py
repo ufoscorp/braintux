@@ -1,7 +1,6 @@
 # Imports
 import os
 from whatsappy import Whatsappy
-from pocketsphinx import AudioFile
 # Import fuctions
 from functions.help import Help
 from functions.quit import Quit
@@ -12,13 +11,7 @@ def puttingTitle(title):
     os.system('clear')
     print('''
 
-  ___   ____   ___  ____        ____   ____  ____  __ __  ____ _____
- /   \ |    \ /  _]|    \      |    | /    ||    \|  |  ||    / ___/
-|     ||  o  )  [_ |  _  |     |__  ||  o  ||  D  )  |  | |  (   \_ 
-|  O  ||   _/    _]|  |  |     __|  ||     ||    /|  |  | |  |\__  |
-|     ||  | |   [_ |  |  |    /  |  ||  _  ||    \|  :  | |  |/  \ |
-|     ||  | |     ||  |  |    \  `  ||  |  ||  .  \\\\   /  |  |\    |
- \___/ |__| |_____||__|__|     \____j|__|__||__|\_| \_/  |____|\___|
+  bremtãquis
                                                                     
         ''')
     print(title)
@@ -57,7 +50,7 @@ def multipleChoice(question, choicesInText):
 
 
 wantWhatsappy = multipleChoice(
-    "You can control your Jarvis by your cellphone, using the Whatsapp Web. Do you want?",
+    "You can control your Jarvis by your smartphone, using the Whatsapp Web. Do you want?",
     "Yes;No"
     )
 
@@ -88,7 +81,7 @@ while executing:
 
     if wantWhatsappy == "Yes":
 
-        puttingTitle("All the communication is in your cellphone. To explore, use the /cmd help")
+        puttingTitle("All the communication is in your smartphone. To explore, use the /cmd help")
 
         newMessage = whatsappy.checkNewMessage()
 
@@ -112,9 +105,14 @@ while executing:
             
             whatsappy.send_attachment(newMessage[6:])
             
+        elif newMessage[0:6] == "/audio":
+
+            whatsappy.sendMessage('I heard: ' + newMessage[7:])
+
         elif newMessage[0:4] == "/cmd":
 
             command = newMessage[5:]
+
 
     else:
 

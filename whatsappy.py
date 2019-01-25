@@ -8,11 +8,16 @@ from pynput.keyboard import Key, Controller
 import pynput
 import time
 import speech_recognition as sr
+import ffmpeg
 
 class Whatsappy:
 
     # Creating an instance of Whatsappy
     def __init__(self, browser, name):
+
+        files = os.listdir('audios')
+        for file in files:
+            os.remove('audios/'+file)
 
         self.keyboard = Controller()
         # Creating a variable to the lastMessage
@@ -30,7 +35,7 @@ class Whatsappy:
             profile = webdriver.FirefoxProfile()
             profile.set_preference("browser.download.folderList", 2)
             profile.set_preference("browser.download.manager.showWhenStarting", False)
-            profile.set_preference("browser.download.dir", 'audios')
+            profile.set_preference("browser.download.dir", os.getcwd()+'/audios')
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "audio/ogg")
 
             self.driver = webdriver.Firefox(firefox_profile=profile)
@@ -56,10 +61,10 @@ class Whatsappy:
         username = str(username)[:len(username)-1]
 
         # Waiting the loading of the page
-        time.sleep(2)
+        time.sleep(10)
 
         # Sending the initial message
-        self.sendMessage("{} connected your Jarvis named by {}.".format(username, self.name))
+        self.sendMessage("{} connected your BrainTux")
 
     # Function to send messages
     def sendMessage(self, message):
@@ -69,7 +74,7 @@ class Whatsappy:
         # Checking if the message isn't empty
         if message != "":
             # Adding the bot name to the message
-            message = self.name + ": \n" + str(message) + "\n"
+            message = "BrainTux: \n" + str(message) + "\n"
             # Sending the characteres
             textBox.send_keys(message)
             
@@ -97,27 +102,51 @@ class Whatsappy:
     # Checking if have a new message
     def checkNewMessage(self):
 
-        # Catching all the audios (don't work)
-        
+        # Catching all the audios
         audios = self.driver.find_elements_by_class_name('_2jfIu')
+        audiosLink = self.driver.find_elements_by_tag_name('audio')
+
+        # Verifying if there is no audios
         if len(audios) != 0:
-            ActionChains(self.driver).move_to_element(audios[-1]).perform()
-            optionsButton = self.driver.find_elements_by_xpath('//div[@data-js-context-icon="true"]')
-            optionsButton[-1].click()
-            downloadButton = self.driver.find_element_by_xpath("//div[@title='Baixar']")
-            downloadButton.click()
 
-            os.system("ffmpeg -i audios/* audios/audio.wav")
+            newAudio = audiosLink[-1].get_attribute('src')
 
-            r = sr.Recognizer()
-            with sr.AudioFile("audios/audio.wav") as source:
-                audio = r.record(source)
+            if newAudio != self.lastAudio:
 
-            try:
-                audioSpeech = r.recognize_google(audio)
-            except Exception as e:
-                print("Exception: "+str(e))
-                exit()
+                self.lastAudio = newAudio
+                # Mouse hover on the last audio
+                ActionChains(self.driver).move_to_element(audios[-1]).perform()
+                # Finding the options button
+                optionsButton = self.driver.find_elements_by_xpath('//div[@data-js-context-icon="true"]')
+                # Clicking this
+                optionsButton[-1].click()
+                # Finding the download button
+                downloadButton = self.driver.find_element_by_xpath("//div[@title='Baixar']")
+                # Clicking this
+                downloadButton.click()
+                # Waiting the download
+                time.sleep(3)
+                # Converting ogg to wav
+                os.popen("ffmpeg -i audios/* audios/audio.wav -loglevel panic")
+                # Waiting the conversion
+                time.sleep(1)
+                # GO
+                r = sr.Recognizer()
+                with sr.AudioFile("audios/audio.wav") as source:
+                    audio = r.record(source)
+
+                try:
+                    # This is the result
+                    speech = r.recognize_google(audio)
+                    speech = '/audio ' + speech
+                    # Removing the audio
+                    files = os.listdir('audios')
+                    for file in files:
+                        os.remove('audios/'+file)
+                    return speech
+                except Exception as e:
+                    print("Exception: "+str(e))
+                    exit()
         
 
         # Catching all the messages

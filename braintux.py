@@ -69,7 +69,7 @@ if wantWhatsappy == "Yes":
         browser = multipleChoice("Let we know your browser.",
             "Chrome;Firefox"
             )
-        name = textInput("Choose a cute name to your bot :)")
+        name = textInput("Let we know the group name.")
         puttingTitle("Now you have to scan the QR CODE.")
         whatsappy = Whatsappy(browser, name)
 
@@ -88,7 +88,12 @@ while executing:
 
     if wantWhatsappy == "Yes":
 
-        puttingTitle("All the communication is in your smartphone. To explore, use the /cmd help")
+        puttingTitle('''
+            All the communication is in your smartphone
+            To explore, use the /cmd help
+            (We have voice recognition :P)
+
+            ''')
 
         newMessage = whatsappy.checkNewMessage()
 

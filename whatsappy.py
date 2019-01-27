@@ -4,6 +4,9 @@ import os
 import urllib.request
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as ec
 from pynput.keyboard import Key, Controller
 import pynput
 import time
@@ -64,7 +67,7 @@ class Whatsappy:
         time.sleep(10)
 
         # Sending the initial message
-        self.sendMessage("{} connected your BrainTux")
+        self.sendMessage("{} connected your BrainTux".format(username))
 
     # Function to send messages
     def sendMessage(self, message):
@@ -78,7 +81,6 @@ class Whatsappy:
             # Sending the characteres
             textBox.send_keys(message)
             
-    # davi q fez, nem sei como funciona, é noix
     def send_attachment(self, path):
 
         # Attachment Drop Down Menu
@@ -100,6 +102,9 @@ class Whatsappy:
         self.keyboard.release(pynput.keyboard.Key.enter)
 
     # Checking if have a new message
+    def youtubeSearch(self, search):
+        pass
+        
     def checkNewMessage(self):
 
         # Catching all the audios
@@ -111,17 +116,30 @@ class Whatsappy:
 
             newAudio = audiosLink[-1].get_attribute('src')
 
-            if newAudio != self.lastAudio:
-
-                self.lastAudio = newAudio
+            try:
                 # Mouse hover on the last audio
                 ActionChains(self.driver).move_to_element(audios[-1]).perform()
+                inScreen = True
+            except:
+                inScreen = False
+
+            if newAudio != self.lastAudio and inScreen:
+
+                self.lastAudio = newAudio
+
                 # Finding the options button
                 optionsButton = self.driver.find_elements_by_xpath('//div[@data-js-context-icon="true"]')
-                # Clicking this
-                optionsButton[-1].click()
-                # Finding the download button
-                downloadButton = self.driver.find_element_by_xpath("//div[@title='Baixar']")
+
+                while True:
+                    try:
+                        # Clicking this
+                        optionsButton[-1].click()
+                        # Finding the download button
+                        downloadButton = self.driver.find_element_by_xpath("//div[@title='Baixar']")
+                        break
+                    except:
+                        pass
+
                 # Clicking this
                 downloadButton.click()
                 # Waiting the download
@@ -131,6 +149,7 @@ class Whatsappy:
                 # Waiting the conversion
                 time.sleep(1)
                 # GO
+                
                 r = sr.Recognizer()
                 with sr.AudioFile("audios/audio.wav") as source:
                     audio = r.record(source)
@@ -147,6 +166,7 @@ class Whatsappy:
                 except Exception as e:
                     print("Exception: "+str(e))
                     exit()
+
         
 
         # Catching all the messages

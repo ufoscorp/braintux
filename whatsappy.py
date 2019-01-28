@@ -109,10 +109,19 @@ class Whatsappy:
 
         # Catching all the audios
         audios = self.driver.find_elements_by_class_name('_2jfIu')
-        audiosLink = self.driver.find_elements_by_tag_name('audio')
 
         # Verifying if there is no audios
         if len(audios) != 0:
+
+            # if audios is not empty, audiosLink cannot be empty
+            audiosLink = self.driver.find_elements_by_tag_name('audio')
+
+            while True:
+                if len(audiosLink) == 0:
+                    time.sleep(1)
+                    audiosLink = self.driver.find_elements_by_tag_name('audio')
+                else:
+                    break
 
             newAudio = audiosLink[-1].get_attribute('src')
 
@@ -138,7 +147,8 @@ class Whatsappy:
                         downloadButton = self.driver.find_element_by_xpath("//div[@title='Baixar']")
                         break
                     except:
-                        pass
+                        # Wait
+                        time.sleep(1)
 
                 # Clicking this
                 downloadButton.click()

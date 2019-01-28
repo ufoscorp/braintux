@@ -57,12 +57,12 @@ def multipleChoice(question, choicesInText):
 
 
 wantWhatsappy = multipleChoice(
-    "You can control your Jarvis by your smartphone, using the Whatsapp Web. Do you want?",
+    "You can control your BrainTux by your smartphone, using the Whatsapp Web. Do you want?",
     "Yes;No"
     )
 
 if wantWhatsappy == "Yes":
-    groupCreated = multipleChoice("Please, cetificate do you have a group with only yourself (The name of this group needs to be the name of your bot!) \n Everything ok?",
+    groupCreated = multipleChoice("Please, cetificate do you have a group with only yourself. \n Everything ok?",
         "Ok!;No, I don't have :("
         )
     if groupCreated == "Ok!":

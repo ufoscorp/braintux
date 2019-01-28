@@ -16,7 +16,7 @@ import ffmpeg
 class Whatsappy:
 
     # Creating an instance of Whatsappy
-    def __init__(self, browser, name):
+    def __init__(self, browser, groupname):
 
         files = os.listdir('audios')
         for file in files:
@@ -26,8 +26,8 @@ class Whatsappy:
         # Creating a variable to the lastMessage
         self.lastMessage = ""
         self.lastAudio = ""
-        # Receiving the name
-        self.name = name
+        # Receiving the groupname
+        self.groupname = groupname
 
         # Choosing the browser and creating the driver
         if browser == "Chrome":
@@ -53,7 +53,7 @@ class Whatsappy:
         # waiting the QR CODE scan
         while True:
             try:
-                user = self.driver.find_element_by_xpath('//span[@title = "{}"]'.format(name))
+                user = self.driver.find_element_by_xpath('//span[@title = "{}"]'.format(groupname))
                 user.click()
                 break
             except:
@@ -181,15 +181,18 @@ class Whatsappy:
 
         # Catching all the messages
         messages = self.driver.find_elements_by_class_name('_3zb-j')
-        # Supposed new message is the last message
-        newMessage = messages[-1].text
+        if len(messages) != 0:
+            # Supposed new message is the last message
+            newMessage = messages[-1].text
 
-        # Checking if the new message isn't iqual to the last message
-        if newMessage != self.lastMessage:
-            # We have a new message
-            self.lastMessage = newMessage
-            return newMessage
+            # Checking if the new message isn't iqual to the last message
+            if newMessage != self.lastMessage:
+                # We have a new message
+                self.lastMessage = newMessage
+                return newMessage
 
-        else:
-            # No new message
-            return ""
+            else:
+                # No new message
+                return ""
+        
+        return ""

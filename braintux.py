@@ -145,5 +145,3 @@ while executing:
 
         if wantWhatsappy == "Yes":
             whatsappy.sendMessage(output)
-
-

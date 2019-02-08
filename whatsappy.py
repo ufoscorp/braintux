@@ -18,7 +18,11 @@ class Whatsappy:
     # Creating an instance of Whatsappy
     def __init__(self, browser, groupname):
 
-        files = os.listdir('audios')
+        try:
+            files = os.listdir('audios')
+        except:
+            os.makedirs('audios')
+            files = os.listdir('audios')
         for file in files:
             os.remove('audios/'+file)
 
@@ -31,7 +35,7 @@ class Whatsappy:
 
         # Choosing the browser and creating the driver
         if browser == "Chrome":
-            self.driver = webdriver.Chrome()
+                self.driver = webdriver.Chrome()
 
         elif browser == "Firefox":
 
@@ -40,7 +44,7 @@ class Whatsappy:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", os.getcwd()+'/audios')
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "audio/ogg")
-
+            
             self.driver = webdriver.Firefox(firefox_profile=profile)
 
         else:

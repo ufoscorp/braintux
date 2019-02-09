@@ -1,17 +1,13 @@
 #Imports
+import sys, pwd, os, time, pynput, ffmpeg
 from selenium import webdriver
-import os
-import urllib.request
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from pynput.keyboard import Key, Controller
-import pynput
-import time
 import speech_recognition as sr
-import ffmpeg
 
 class Whatsappy:
 
@@ -35,8 +31,19 @@ class Whatsappy:
 
         # Choosing the browser and creating the driver
         if browser == "Chrome":
+            try:
                 self.driver = webdriver.Chrome()
-
+            except:
+                if os.name=='posix':
+                    if not os.path.isfile('/usr/local/bin/chromedriver'):
+                        os.system('wget https://chromedriver.storage.googleapis.com/2.46/chromedriver_linux64.zip -O /usr/local/bin/cdriver.zip')
+                        os.system('unzip /usr/local/bin/cdriver.zip -d /usr/local/bin')
+                        self.driver = webdriver.Chrome()
+                    else:
+                        raise EnvironmentError("Selenium error. Tipo: do not run this script as root.")
+                elif os.name == 'nt':
+                    print('You need to install a corresponding version of the Chrome driver at http://chromedriver.chromium.org/downloads')
+                    raise EnvironmentError("Chrome driver not installed.")
         elif browser == "Firefox":
 
             profile = webdriver.FirefoxProfile()
@@ -44,9 +51,20 @@ class Whatsappy:
             profile.set_preference("browser.download.manager.showWhenStarting", False)
             profile.set_preference("browser.download.dir", os.getcwd()+'/audios')
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "audio/ogg")
-            
-            self.driver = webdriver.Firefox(firefox_profile=profile)
-
+            try:
+                self.driver = webdriver.Firefox(firefox_profile=profile)
+            except:
+                if os.name =='posix':
+                    if not os.path.isfile('/usr/local/bin/geckodriver'):
+                        os.system('wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz -O /usr/local/bin/gecko.tar.gz')
+                        os.system('tar xf /usr/local/bin/gecko.tar.gz -C /usr/local/bin/')
+                        self.driver = webdriver.Firefox(firefox_profile=profile)
+                    else:
+                        raise EnvironmentError("Selenium error. Tip: don't run this script as root.")
+                elif os.name == 'nt':
+                    print("You need to install the lastest version of gecko driver at: https://github.com/mozilla/geckodriver/releases")
+                    raise EnvironmentError("Gecko driver not installed")
+                
         else:
             print("Error! This browser don't exist in our list.")
             exit()
@@ -64,7 +82,7 @@ class Whatsappy:
                 pass
 
         # Getting the username using whoami command
-        username = os.popen("whoami").read()
+        username = pwd.getpwuid( os.getuid() )[ 0 ]
         username = str(username)[:len(username)-1]
 
         # Waiting the loading of the page

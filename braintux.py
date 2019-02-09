@@ -9,7 +9,7 @@ Quit = Quit()
 
 def puttingTitle(title):
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('''
+    print(r'''
 
   
     ____             _     ______          

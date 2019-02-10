@@ -40,7 +40,7 @@ class Whatsappy:
                         os.system('unzip /usr/local/bin/cdriver.zip -d /usr/local/bin')
                         self.driver = webdriver.Chrome()
                     else:
-                        raise EnvironmentError("Selenium error. Tipo: do not run this script as root.")
+                        raise EnvironmentError("Selenium error. Tip: do not run this script as root.")
                 elif os.name == 'nt':
                     print('You need to install a corresponding version of the Chrome driver at http://chromedriver.chromium.org/downloads')
                     raise EnvironmentError("Chrome driver not installed.")
@@ -82,8 +82,7 @@ class Whatsappy:
                 pass
 
         # Getting the username using whoami command
-        username = pwd.getpwuid( os.getuid() )[ 0 ]
-        username = str(username)[:len(username)-1]
+        username = pwd.getpwuid(os.getuid())[0]
 
         # Waiting the loading of the page
         time.sleep(10)

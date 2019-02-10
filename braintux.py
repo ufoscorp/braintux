@@ -1,12 +1,14 @@
 # Imports
 import os
+from pytube import YouTube
 from whatsappy import Whatsappy
-from functions.youtube import Youtube
 # Import fuctions
+from functions.youtube import Youtube
 from functions.help import Help
 from functions.quit import Quit
 Help = Help()
 Quit = Quit()
+Youtube = Youtube()
 
 def puttingTitle(title):
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -128,7 +130,15 @@ while executing:
 
         elif newMessage[0:15] == "/youtube search":
 
-            Youtube.search(newMessage[16:])
+            term = str(newMessage[16:])
+            Youtube.search(term)
+            
+        
+        elif newMessage[0:17] == '/youtube download':
+            whatsappy.sendMessage('Downloading the videos'+newMessage[18:])
+            YouTube(newMessage[18:]).streams.first().download()
+            whatsappy.sendMessage('')
+
 
     else:
 

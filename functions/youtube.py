@@ -14,8 +14,8 @@ class Youtube:
         return final_list 
 
     def search(self, term):
-
-        self.resultsSite = requests.get("https://www.youtube.com/results?search_query={}&sp=EgIQAQ%253D%253D".format(term))
+        self.term = term
+        self.resultsSite = requests.get("https://www.youtube.com/results?search_query={}&sp=EgIQAQ%253D%253D".format(self.term))
         self.links=re.findall(r'watch\?v=.{11}', self.resultsSite.text)
         self.links = Youtube.removeDuplicate(self, self.links)
         self.dirtyVideoNames=re.findall('title=".+rel="spf', self.resultsSite.text)

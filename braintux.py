@@ -1,6 +1,7 @@
 # Imports
 import os
 from whatsappy import Whatsappy
+from functions.youtube import Youtube
 # Import fuctions
 from functions.help import Help
 from functions.quit import Quit
@@ -125,6 +126,9 @@ while executing:
 
             command = newMessage[5:]
 
+        elif newMessage[0:15] == "/youtube search":
+
+            Youtube.search(newMessage[16:])
 
     else:
 

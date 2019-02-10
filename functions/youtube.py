@@ -1,9 +1,11 @@
 import re
 import requests
+from pytube import YouTube
+
 class Youtube:
 
     def __init__(self):
-        pass
+        self.option = 0
 
     def removeDuplicate(self, duplicate):
 
@@ -13,18 +15,20 @@ class Youtube:
                 final_list.append(item) 
         return final_list 
 
+    def download(self, link):
+        YouTube(link).streams.first().download()
+
+
     def search(self, term):
-        self.term = term
-        self.resultsSite = requests.get("https://www.youtube.com/results?search_query={}&sp=EgIQAQ%253D%253D".format(self.term))
-        self.links=re.findall(r'watch\?v=.{11}', self.resultsSite.text)
-        self.links = Youtube.removeDuplicate(self, self.links)
-        self.dirtyVideoNames=re.findall('title=".+rel="spf', self.resultsSite.text)
+        resultsSite = requests.get("https://www.youtube.com/results?search_query={}&sp=EgIQAQ%253D%253D".format(term))
+        self.links=re.findall(r'watch\?v=.{11}', resultsSite.text)
+        self.links = self.removeDuplicate(self.links)
+        dirtyVideoNames=re.findall('title=".+rel="spf', resultsSite.text)
         self.videoNames=[]
-        for name in self.dirtyVideoNames:
+        for name in dirtyVideoNames:
             name = name.replace("title=\"", '')
             name = name.replace('" rel="spf', '')
             self.videoNames.append(name)
-            print(name)
         self.resultsDict=dict(zip(self.videoNames, self.links))
         
     def download(self, link):

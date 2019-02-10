@@ -1,6 +1,5 @@
 # Imports
 import os
-from pytube import YouTube
 from whatsappy import Whatsappy
 # Import fuctions
 from functions.youtube import Youtube
@@ -132,12 +131,17 @@ while executing:
 
             term = str(newMessage[16:])
             Youtube.search(term)
-            
+            whatsappy.sendMessage("Results:")
+            option=0
+            for video in Youtube.videoNames:
+                option+=1
+                whatsappy.sendMessage(str(option)+": " +video)
+
         
         elif newMessage[0:17] == '/youtube download':
             whatsappy.sendMessage('Downloading the videos'+newMessage[18:])
-            YouTube(newMessage[18:]).streams.first().download()
-            whatsappy.sendMessage('')
+            Youtube.download(newMessage[18:])
+            whatsappy.sendMessage(''Download )
 
 
     else:

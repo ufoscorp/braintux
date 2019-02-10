@@ -16,7 +16,7 @@ class Youtube:
         return final_list 
 
     def download(self, link):
-        YouTube(link).streams.first().download()
+        YouTube(link).streams.first().download('videos')
 
 
     def search(self, term):
@@ -30,6 +30,3 @@ class Youtube:
             name = name.replace('" rel="spf', '')
             self.videoNames.append(name)
         self.resultsDict=dict(zip(self.videoNames, self.links))
-        
-    def download(self, link):
-        pass

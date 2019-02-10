@@ -139,9 +139,18 @@ while executing:
 
         
         elif newMessage[0:17] == '/youtube download':
-            whatsappy.sendMessage('Downloading the videos'+newMessage[18:])
+            whatsappy.sendMessage('Downloading the video: '+newMessage[18:])
             Youtube.download(newMessage[18:])
-            whatsappy.sendMessage(''Download )
+
+            files = os.listdir('videos')
+
+            for index in range(len(files)):
+                files[index] = 'videos/' + files[index]
+            
+            files.sort(key=os.path.getmtime)
+            ourvideo = files[-1]
+
+            whatsappy.send_attachment(os.getcwd() + '/' + ourvideo)
 
 
     else:

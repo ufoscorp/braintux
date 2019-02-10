@@ -16,11 +16,15 @@ class Whatsappy:
 
         try:
             files = os.listdir('audios')
+            for file in files:
+                os.remove('audios/'+file)
         except:
             os.makedirs('audios')
-            files = os.listdir('audios')
-        for file in files:
-            os.remove('audios/'+file)
+        
+        try:
+            files = os.listdir('videos')
+        except:
+            os.makedirs('videos')
 
         self.keyboard = Controller()
         # Creating a variable to the lastMessage
@@ -119,8 +123,15 @@ class Whatsappy:
         self.keyboard.press(pynput.keyboard.Key.enter)
         self.keyboard.release(pynput.keyboard.Key.enter)
         time.sleep(2)
-        self.keyboard.press(pynput.keyboard.Key.enter)
-        self.keyboard.release(pynput.keyboard.Key.enter)
+
+        while True:
+            try:
+                sendButton = self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div[2]/div[2]/span/div/span/div/div/div[2]/span[2]/div/div')
+                sendButton.click()
+            except:
+                pass
+
+        clipButton.click()
 
     # Checking if have a new message
     def youtubeSearch(self, search):

@@ -25,8 +25,12 @@ class Youtube:
         self.links = self.removeDuplicate(self.links)
         dirtyVideoNames=re.findall('title=".+rel="spf', resultsSite.text)
         self.videoNames=[]
+
         for name in dirtyVideoNames:
             name = name.replace("title=\"", '')
             name = name.replace('" rel="spf', '')
+            if  'describe' in name:
+                name = name[:-41]
+
             self.videoNames.append(name)
         self.resultsDict=dict(zip(self.videoNames, self.links))

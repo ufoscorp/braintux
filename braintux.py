@@ -8,20 +8,16 @@ from functions.quit import Quit
 Help = Help()
 Quit = Quit()
 Youtube = Youtube()
-
+import whatsappy
 def puttingTitle(title):
     os.system('cls' if os.name == 'nt' else 'clear')
     print(r'''
-
-  
     ____             _     ______          
    / __ )_________ _(_)___/_  __/_  ___  __
   / __  / ___/ __ `/ / __ \/ / / / / / |/_/
  / /_/ / /  / /_/ / / / / / / / /_/ />  <  
 /_____/_/   \__,_/_/_/ /_/_/  \__,_/_/|_|  
-                                           
-
-                                                                    
+                                                                                                     
         ''')
     print(title)
 
@@ -132,12 +128,32 @@ while executing:
             term = str(newMessage[16:])
             Youtube.search(term)
             whatsappy.sendMessage("Results:")
-            option=0
-            for video in Youtube.videoNames:
-                option+=1
-                whatsappy.sendMessage(str(option)+": " +video)
+            index=0
+            results = '\n'.join(map(str, Youtube.videoNames))
 
-        
+            whatsappy.sendMessage(results)
+            whatsappy.sendMessage("Which video do you want to download? (select a number)")
+
+            while True:
+                try:
+                    choice=int(whatsappy.checkNewMessage())
+                    break
+                except :
+                    pass
+            link='www.youtube.com/'+list(Youtube.resultsDict.values())[choice]
+            whatsappy.sendMessage('Downloading the video: '+link)
+            Youtube.download(link)
+
+            files = os.listdir('videos')
+
+            for index in range(len(files)):
+                files[index] = 'videos/' + files[index]
+            
+            files.sort(key=os.path.getmtime)
+            ourvideo = files[-1]
+
+            whatsappy.send_attachment(os.getcwd() + '/' + ourvideo)
+            
         elif newMessage[0:17] == '/youtube download':
             whatsappy.sendMessage('Downloading the video: '+newMessage[18:])
             Youtube.download(newMessage[18:])

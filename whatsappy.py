@@ -128,6 +128,7 @@ class Whatsappy:
             try:
                 sendButton = self.driver.find_element_by_xpath('//*[@id="app"]/div/div/div[2]/div[2]/span/div/span/div/div/div[2]/span[2]/div/div')
                 sendButton.click()
+                break
             except:
                 pass
 

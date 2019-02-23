@@ -1,5 +1,5 @@
 #Imports
-import sys, pwd, os, time, pynput, ffmpeg
+import sys, pwd, os, time, pynput, ffmpeg, sys
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from pynput.keyboard import Key, Controller
 import speech_recognition as sr
 
-class Whatsappy:
+class Whatsapp:
 
     # Creating an instance of Whatsappy
     def __init__(self, browser, groupname):
@@ -60,8 +60,8 @@ class Whatsappy:
             except:
                 if os.name =='posix':
                     if not os.path.isfile('/usr/local/bin/geckodriver'):
-                        os.system('wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz -O /usr/local/bin/gecko.tar.gz')
-                        os.system('tar xf /usr/local/bin/gecko.tar.gz -C /usr/local/bin/')
+                        os.system('sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz -O /usr/local/bin/gecko.tar.gz')
+                        os.system('sudo tar xf /usr/local/bin/gecko.tar.gz -C /usr/local/bin/')
                         self.driver = webdriver.Firefox(firefox_profile=profile)
                     else:
                         raise EnvironmentError("Selenium error. Tip: don't run this script as root.")
@@ -229,3 +229,6 @@ class Whatsappy:
                 return ""
         
         return ""
+
+#whatsapp=Whatsapp(sys.argv[1], sys.argv[2])
+whatsapp=Whatsapp("Firefox", "Whatsapp Bot")

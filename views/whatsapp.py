@@ -1,5 +1,6 @@
 #Imports
-import sys, pwd, os, time, pynput, ffmpeg, sys
+import sys, pwd, os, time, pynput, ffmpeg, subprocess
+
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -135,8 +136,7 @@ class Whatsapp:
         clipButton.click()
 
     # Checking if have a new message
-    def youtubeSearch(self, search):
-        pass
+  
         
     def checkNewMessage(self):
 
@@ -230,5 +230,29 @@ class Whatsapp:
         
         return ""
 
-#whatsapp=Whatsapp(sys.argv[1], sys.argv[2])
-whatsapp=Whatsapp("Firefox", "Whatsapp Bot")
+if sys.argv[1] == "start":
+    whatsapp=Whatsapp(sys.argv[2], sys.argv[3])
+
+executing = True
+
+while executing:
+
+    # checking receive new message
+    newMessage = whatsapp.checkNewMessage();
+    if len(newMessage) > 0:
+        if "/" in newMessage[0]:
+            p = subprocess.Popen("python3 {}/braintux-core.py {}".format(os.getcwd(), newMessage[1:]), shell=True)
+        
+    # checking send new message
+    try:
+        with open(os.getcwd()+"/chat.tmp") as chat:
+            message = chat.readlines()
+            messageType = message[0]
+
+            if messageType == "sendtext":
+                whatsapp.sendMessage(message[1])
+
+            if messageType == "sendfile":
+                whatsapp.send_attachment(os.getcwd() + '/' + message[1])
+    except:
+        pass

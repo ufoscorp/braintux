@@ -36,6 +36,12 @@ def kill(module):
     else:
         textToView("{} aren't in our base.".format(module))
 
+def help():
+
+    with open(os.getcwd()+"/help.txt", "r") as help:
+        message = help.read()
+        textToView(message)
+
 if len(sys.argv) > 1:
 
     # args to modules
@@ -60,7 +66,7 @@ if len(sys.argv) > 1:
                 # function don't exist
                 textToView("This module don't have this function.")
         else:
-            textToView("Usage: braintux whatsapp <function> [OPTIONS]")
+            textToView("Usage: braintux whatsapp <function> [OPTIONS]\nfunctions: start, stop")
     
     elif sys.argv[1] == "terminal":
         # access functions
@@ -78,7 +84,7 @@ if len(sys.argv) > 1:
                 # function don't exist
                 textToView("This module don't have this function.")
         else:
-            textToView("Usage: braintux terminal <function> [OPTIONS]")
+            textToView("Usage: braintux terminal <function> [OPTIONS]\nfunctions: start, stop")
 
     elif sys.argv[1] == "youtube":
         # access functions
@@ -97,7 +103,7 @@ if len(sys.argv) > 1:
                 # function don't exist
                 textToView("This module don't have this function.")
         else:
-            textToView("Usage: braintux youtube <function> [OPTIONS]")
+            textToView("Usage: braintux youtube <function> [OPTIONS]\nfunctions: search, download")
 
 
 
@@ -119,15 +125,7 @@ if len(sys.argv) > 1:
         textToView(stringOfProcesses)
     
     else:
-
-        with open(os.getcwd()+"/help.txt", "r") as help:
-            message = help.read()
-            for view in views:
-                textToView(message)
+        help()
         
 else:
-
-    with open(os.getcwd()+"/help.txt", "r") as help:
-        message = help.read()
-        for view in views:
-            textToView(message)
+    help()

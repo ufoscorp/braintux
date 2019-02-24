@@ -12,7 +12,7 @@ import speech_recognition as sr
 
 class Whatsapp:
 
-    # Creating an instance of Whatsappy
+    # Creating an instance of Whatsapp
     def __init__(self, browser, groupname):
 
         try:
@@ -103,7 +103,7 @@ class Whatsapp:
         # Checking if the message isn't empty
         if message != "":
             # Adding the bot name to the message
-            message = "BrainTux: \n" + str(message) + "\n"
+            message = "BrainTux:\n" + str(message) + "\n"
             # Sending the characteres
             textBox.send_keys(message)
             

@@ -4,8 +4,8 @@ class Database:
 
     def __init__(self):
 
-        conn = sqlite3.connect('system.db')
-        self.cursor = conn.cursor()
+        self.conn = sqlite3.connect('system.db')
+        self.cursor = self.conn.cursor()
 
         self.cursor.execute('''
         CREATE TABLE IF NOT EXISTS processes (
@@ -30,7 +30,7 @@ class Database:
 
     def getPID(self, name):
 
-        self.cursor.execute("SELECT pid FROM processes WHERE name = '{}';".format(name))
+        self.cursor.execute("SELECT pid FROM processes WHERE name = '{}'".format(name))
 
         result = self.cursor.fetchall()
 
@@ -41,15 +41,20 @@ class Database:
     
     def turnOn(self, name, pid):
 
-        self.cursor.execute("INSERT INTO processes (name, pid) values ('{}', '{}');".format(name, pid))
+        self.cursor.execute("INSERT INTO processes (name, pid) VALUES ('{}', '{}')".format(name, pid))
+
+        self.conn.commit()
+        
     
     def turnOff(self, name):
 
-        self.cursor.execute("DELETE processes WHERE name = '{}';".format(name))
+        self.cursor.execute("DELETE FROM processes WHERE name = '{}'".format(name))
+
+        self.conn.commit()
 
     def isUp(self, name):
 
-        self.cursor.execute("SELECT * from processes WHERE name = '{}';".format(name))
+        self.cursor.execute("SELECT * from processes WHERE name = '{}'".format(name))
 
         result = self.cursor.fetchall()
 

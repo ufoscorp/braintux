@@ -6,35 +6,31 @@ class Terminal:
 
         pass
     
-    def putTitle(self, title):
-        os.system('cls' if os.name == 'nt' else 'clear')
-        print('''
-        ____             _     ______          
-       / __ )_________ _(_)___/_  __/_  ___  __
-      / __  / ___/ __ `/ / __ \/ / / / / / |/_/
-     / /_/ / /  / /_/ / / / / / / / /_/ />  <  
-    /_____/_/   \__,_/_/_/ /_/_/  \__,_/_/|_|  
-                                                                                                        
-            ''')
-        print(title)
+    def sendMessage(self, title):
+        print("Braintux: "+title)
 
 terminal = Terminal()
 
 executing = True
+oldMessage = ""
 
 while True:
 
     # checking send new message
     try:
-        with open(os.getcwd()+"/chat.tmp") as chat:
+        with open(os.getcwd()+"/chat.tmp", "r", os.O_NONBLOCK) as chat:
             message = chat.read()
-            print(message)
-            messageType = message[0:8]
+            
+            if message != oldMessage:
 
-            if messageType == "sendtext":
-                putTitle(message[8:])
+                messageType = message[0:8]
 
-            if messageType == "sendfile":
-                putTitle('New file in: ' + os.getcwd() + '/' + message[8:])
+                if messageType == "sendtext":
+                    terminal.sendMessage(message[8:])
+
+                if messageType == "sendfile":
+                    terminal.sendMessage('New file in: ' + os.getcwd() + '/' + message[8:])
+            
+            oldMessage = str(message)
     except:
         pass

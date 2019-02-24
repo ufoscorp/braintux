@@ -35,7 +35,7 @@ class Whatsapp:
         self.groupname = groupname
 
         # Choosing the browser and creating the driver
-        if browser == "Chrome":
+        if browser == "chrome":
             try:
                 self.driver = webdriver.Chrome()
             except:
@@ -49,7 +49,7 @@ class Whatsapp:
                 elif os.name == 'nt':
                     print('You need to install a corresponding version of the Chrome driver at http://chromedriver.chromium.org/downloads')
                     raise EnvironmentError("Chrome driver not installed.")
-        elif browser == "Firefox":
+        elif browser == "firefox":
 
             profile = webdriver.FirefoxProfile()
             profile.set_preference("browser.download.folderList", 2)
@@ -115,7 +115,7 @@ class Whatsapp:
         time.sleep(1)
 
         # To send Videos and Images.
-        mediaButtons = self.driver.find_elements_by_class_name('GK4Lv')
+        mediaButtons = self.driver.find_elements_by_class_name('_1azEi')
         mediaButtons[0].click()
         self.keyboard.type(path)
         self.keyboard.press(pynput.keyboard.Key.enter)
@@ -133,8 +133,7 @@ class Whatsapp:
             except:
                 pass
 
-        clipButton.click()
-
+        
     # Checking if have a new message
   
         
@@ -234,6 +233,7 @@ if sys.argv[1] == "start":
     whatsapp=Whatsapp(sys.argv[2], sys.argv[3])
 
 executing = True
+oldMessage = ""
 
 while executing:
 
@@ -245,14 +245,19 @@ while executing:
         
     # checking send new message
     try:
-        with open(os.getcwd()+"/chat.tmp") as chat:
-            message = chat.readlines()
-            messageType = message[0]
+        with open(os.getcwd()+"/chat.tmp", "r", os.O_NONBLOCK) as chat:
+            message = chat.read()
 
-            if messageType == "sendtext":
-                whatsapp.sendMessage(message[1])
+            if message != oldMessage:
+            
+                messageType = message[0:8]
 
-            if messageType == "sendfile":
-                whatsapp.send_attachment(os.getcwd() + '/' + message[1])
+                if messageType == "sendtext":
+                    whatsapp.sendMessage(message[8:])
+
+                if messageType == "sendfile":
+                    whatsapp.send_attachment(os.getcwd() + '/' + message[8:])
+            
+            oldMessage = str(message)
     except:
         pass

@@ -36,10 +36,10 @@ class Youtube:
         self.resultsDict=dict(zip(self.videoNames, self.links))
 
 def sendText(content):
-    subprocess.Popen("python3 {}/braintux-core.py sendtext {}".format(os.getcwd(), str(content)), shell=True)
+    subprocess.Popen("python3 {}/braintux-core.py sendtext '{}'".format(os.getcwd(), str(content)), shell=True)
 
 def sendFile(content):
-    subprocess.Popen("python3 {}/braintux-core.py sendfile {}".format(os.getcwd(), str(content)), shell=True)
+    subprocess.Popen("python3 {}/braintux-core.py sendfile '{}'".format(os.getcwd(), str(content)), shell=True)
 
 Youtube = Youtube()
 
@@ -47,13 +47,11 @@ if sys.argv[1] == "search":
 
     term = str(sys.argv[2])
     Youtube.search(term)
-    sendText("Results:")
 
     results = '\n'.join(map(str, Youtube.videoNames))
-
+    results = "Results:\n"+results+"\nTo download a video: youtube download {} <number>".format(term)
     sendText(results)
-    sendText("To download a video: youtube download {} <number>".format(term))
-
+    
 elif sys.argv[1] == 'download':
 
 
@@ -63,7 +61,7 @@ elif sys.argv[1] == 'download':
 
     results = '\n'.join(map(str, Youtube.videoNames))
 
-    link='www.youtube.com/'+list(Youtube.resultsDict.values())[choice]
+    link='www.youtube.com/'+list(Youtube.resultsDict.values())[int(choice)]
     sendText('Downloading the video: '+link)
     Youtube.download(link)
 

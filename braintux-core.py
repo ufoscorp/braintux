@@ -1,107 +1,131 @@
 #!/usr/bin/env python3
 
 # Default imports
-import os, sys, subprocess
+import os, sys
+from subprocess import Popen
 from db import Database
 db = Database()
-modules = ["whatsapp", "youtube"]
+modules = ["whatsapp", "youtube", "terminal"]
 views = ["whatsapp", "terminal"]
 
 def textToView(content):
 
-    subprocess.Popen("echo 'sendtext\n{}' > {}/chat.tmp".format(content, os.getcwd()), shell=True)
+    with open(os.getcwd()+"/chat.tmp", "w", os.O_NONBLOCK) as chat:
+
+        chat.write('sendtext')
+        chat.write(content)
+
+        chat.close()
 
 def fileToView(content):
 
-    subprocess.Popen("echo 'sendfile\n{}' > {}/chat.tmp".format(content, os.getcwd()), shell=True)
+    with open(os.getcwd()+"/chat.tmp", "w", os.O_NONBLOCK) as chat:
 
-try:
+        chat.write('sendfile')
+        chat.write(content)
 
+        chat.close()
 
-    # management of module instances
-    if sys.argv[1] == "start":
-        # Start a module
-        if sys.argv[2] == "whatsapp":
+def kill(module):
 
-            if db.isUp("whatsapp") == False:
+    PID = db.getPID(module)
+    if PID != False:
+        os.system("kill "+str(PID))
+        os.system("kill "+str(PID+1))
+        db.turnOff(module)
+    else:
+        textToView("{} aren't in our base.".format(module))
 
-                p = subprocess.Popen("python3 {}/views/whatsapp.py start '{}' '{}'".format(os.getcwd(), sys.argv[3], sys.argv[4]), shell=True)
-                db.turnOn("whatsapp", p.pid)
-                textToView("Running Whatsapp Web, don´t forget to scan the QR Code! ")
+if len(sys.argv) > 1:
+
+    # args to modules
+    if sys.argv[1] == "whatsapp":
+        # access functions
+        if len(sys.argv) > 2:
+            if sys.argv[2] == "start":
+                if len(sys.argv) == 5:
+                    if db.isUp("whatsapp") == False:
+                        textToView("Starting Whatsapp. Don´t forget to scan the QR Code!")
+                        p = Popen("python3 {}/views/whatsapp.py start '{}' '{}'".format(os.getcwd(), sys.argv[3], sys.argv[4]), shell=True)
+                        db.turnOn("whatsapp", p.pid)
+                    else:
+                        textToView("Whatsapp already running.")
+                else:
+                    textToView("Usage: braintux whatsapp start <browser> <group name>\n Example: braintux whatsapp start firefox 'my braintux'")
             
+            elif sys.argv[2] == "stop" or sys.argv[2] == "kill":
+                kill("whatsapp")
+                textToView('Stopping whatsapp...')
             else:
-
-                textToView("Whatsapp already running.")
-        
-        if sys.argv[2] == "terminal":
-
-            if db.isUp("terminal") == False:
-
-                p = subprocess.Popen("python3 {}/views/terminal.py start".format(os.getcwd()), shell=True)
-                db.turnOn("terminal", p.pid)
-                textToView("Terminal turning on.")
-            
+                # function don't exist
+                textToView("This module don't have this function.")
+        else:
+            textToView("Usage: braintux whatsapp <function> [OPTIONS]")
+    
+    elif sys.argv[1] == "terminal":
+        # access functions
+        if len(sys.argv) > 2:
+            if sys.argv[2] == "start":
+                if db.isUp("terminal") == False:
+                    textToView("Starting terminal.")
+                    p = Popen("python3 {}/views/terminal.py start".format(os.getcwd()), shell=True)
+                    db.turnOn("terminal", p.pid)
+                else:
+                    textToView("terminal already running.")
+            elif sys.argv[2] == "stop" or sys.argv[2] == "kill":
+                kill("terminal")
             else:
+                # function don't exist
+                textToView("This module don't have this function.")
+        else:
+            textToView("Usage: braintux terminal <function> [OPTIONS]")
 
-                textToView("Terminal already running.")
-
-    if sys.argv[1] == "restart":
-        
-        if sys.argv[2] == "whatsapp":
-
-            if db.isUp("whatsapp") == False:
-
-                p = subprocess.Popen("python3 {}/views/whatsapp.py start '{}' '{}'".format(os.getcwd(), sys.argv[3], sys.argv[4]), shell=True)
-                db.turnOn("whatsapp", p.pid)
-                textToView("Running Whatsapp Web, don´t forget to scan the QR Code! ")
-            
+    elif sys.argv[1] == "youtube":
+        # access functions
+        if len(sys.argv) > 2:
+            if sys.argv[2] == "search":
+                if len(sys.argv) == 4:
+                    youtube=Popen("python3 {}/modules/youtube.py search '{}'".format(os.getcwd(), sys.argv[3]), shell=True)
+                else:
+                    textToView("Usage: braintux youtube search <term>")
+            elif sys.argv[2] == "download":
+                if len(sys.argv) == 5:
+                    youtube=Popen("python3 {}/modules/youtube.py download '{}' '{}'".format(os.getcwd(), sys.argv[3], sys.argv[4]), shell=True)
+                else:
+                    textToView("Usage: braintux youtube download <term> <choice>")
             else:
+                # function don't exist
+                textToView("This module don't have this function.")
+        else:
+            textToView("Usage: braintux youtube <function> [OPTIONS]")
 
-                textToView("Already running.")
 
-    if sys.argv[1] == "kill" or sys.argv=="stop":
-        #Stop a module
-        module = sys.argv[2]
-        if module in modules:
-            PID = db.getPID(module)
-            if PID != False:
-                subprocess.Popen("kill "+PID)
-                db.turnOff(module)
-            else:
-                textToView("Process aren't in our base.")
 
-    if sys.argv[1] == "modules":
+    # modules to view
+    elif sys.argv[1] == "sendtext":
+        message = sys.argv[2]
+        textToView(message)
+    
+    elif sys.argv[1] == "sendfile":
+        file = sys.argv[2]
+        fileToView(file)
+
+    # list modules
+    elif sys.argv[1] == "modules":
         processes = db.listProcesses();
         stringOfProcesses = 'Enabled Modules: \n'
         for process in processes:
             stringOfProcesses += process + '\n'
         textToView(stringOfProcesses)
-
-
-    # args to modules
-    if sys.argv[1] == "youtube":
-        # Apenas um argumento pra cada função
-        if sys.argv[2] == "search":
-            youtube=subprocess.Popen("python3 {}/modules/youtube.py search '{}'".format(os.getcwd(), sys.argv[3]), shell=True)
-        if sys.argv[2] == "download":
-            youtube=subprocess.Popen("python3 {}/modules/youtube.py download '{}' '{}'".format(os.getcwd(), sys.argv[3], sys.argv[4]), shell=True)
-
-
-
-    # modules to view
-    if sys.argv[1] == "sendtext":
-        message = sys.argv[2]
-        textToView(message)
     
-    if sys.argv[1] == "sendfile":
-        file = sys.argv[2]
-        fileToView(file)
+    else:
 
-
-
+        with open(os.getcwd()+"/help.txt", "r") as help:
+            message = help.read()
+            for view in views:
+                textToView(message)
         
-        
-except IndexError:
+else:
 
     with open(os.getcwd()+"/help.txt", "r") as help:
         message = help.read()

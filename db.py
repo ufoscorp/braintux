@@ -15,6 +15,19 @@ class Database:
         );
         ''')
 
+    def listProcesses(self):
+
+        self.cursor.execute("SELECT name FROM processes")
+
+        rawResult = self.cursor.fetchall()
+
+        result = []
+
+        for i in rawResult:
+            result.append(i[0])
+        
+        return result
+
     def getPID(self, name):
 
         self.cursor.execute("SELECT pid FROM processes WHERE name = '{}';".format(name))

@@ -2,16 +2,18 @@
 
 # Default imports
 import os, sys, subprocess
-from views.terminal import Terminal
 from db import Database
-terminal = Terminal()
 db = Database()
 modules = ["whatsapp", "youtube"]
 views = ["whatsapp", "terminal"]
 
-def sendToView(content):
+def textToView(content):
 
-    subprocess.Popen("echo {} > {}/chat.tmp".format(content, os.getcwd()), shell=True)
+    subprocess.Popen("echo 'sendtext\n{}' > {}/chat.tmp".format(content, os.getcwd()), shell=True)
+
+def fileToView(content):
+
+    subprocess.Popen("echo 'sendfile\n{}' > {}/chat.tmp".format(content, os.getcwd()), shell=True)
 
 try:
 
@@ -25,11 +27,23 @@ try:
 
                 p = subprocess.Popen("python3 {}/views/whatsapp.py start '{}' '{}'".format(os.getcwd(), sys.argv[3], sys.argv[4]), shell=True)
                 db.turnOn("whatsapp", p.pid)
-                sendToView("Running Whatsapp Web, don´t forget to scan the QR Code! ")
+                textToView("Running Whatsapp Web, don´t forget to scan the QR Code! ")
             
             else:
 
-                sendToView("Already running.")
+                textToView("Whatsapp already running.")
+        
+        if sys.argv[2] == "terminal":
+
+            if db.isUp("terminal") == False:
+
+                p = subprocess.Popen("python3 {}/views/terminal.py start".format(os.getcwd()), shell=True)
+                db.turnOn("terminal", p.pid)
+                textToView("Terminal turning on.")
+            
+            else:
+
+                textToView("Terminal already running.")
 
     if sys.argv[1] == "restart":
         
@@ -39,11 +53,11 @@ try:
 
                 p = subprocess.Popen("python3 {}/views/whatsapp.py start '{}' '{}'".format(os.getcwd(), sys.argv[3], sys.argv[4]), shell=True)
                 db.turnOn("whatsapp", p.pid)
-                prinsendToView("Running Whatsapp Web, don´t forget to scan the QR Code! ")
+                textToView("Running Whatsapp Web, don´t forget to scan the QR Code! ")
             
             else:
 
-                sendToView("Already running.")
+                textToView("Already running.")
 
     if sys.argv[1] == "kill" or sys.argv=="stop":
         #Stop a module
@@ -54,8 +68,14 @@ try:
                 subprocess.Popen("kill "+PID)
                 db.turnOff(module)
             else:
+                textToView("Process aren't in our base.")
 
-
+    if sys.argv[1] == "modules":
+        processes = db.listProcesses();
+        stringOfProcesses = 'Enabled Modules: \n'
+        for process in processes:
+            stringOfProcesses += process + '\n'
+        textToView(stringOfProcesses)
 
 
     # args to modules
@@ -71,11 +91,11 @@ try:
     # modules to view
     if sys.argv[1] == "sendtext":
         message = sys.argv[2]
-        sendToView(message)
+        textToView(message)
     
     if sys.argv[1] == "sendfile":
         file = sys.argv[2]
-        sendToView(file)
+        fileToView(file)
 
 
 
@@ -86,4 +106,4 @@ except IndexError:
     with open(os.getcwd()+"/help.txt", "r") as help:
         message = help.read()
         for view in views:
-            subprocess.Popen("python3 {}/views/{}.py sendtext '{}'".format(os.getcwd(), view, message), shell=True)
+            textToView(message)

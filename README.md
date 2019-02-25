@@ -4,7 +4,7 @@ Amazing automation for your life.
 
 ## Modules
 
-Braintux are made by modules. EVERYTHING ARE MODULES. Some of the serve to do the communication between Braintux and you, we call the by VIEWS.
+Braintux are made by modules. **everything are modules**. Some of the serve to do the communication between Braintux and you, we call the by **views**.
 
 ### View Modules
 

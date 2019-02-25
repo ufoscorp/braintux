@@ -24,7 +24,6 @@ Braintux are made by modules. EVERYTHING ARE MODULES. Some of the serve to do th
 
 ### Linux
 
-Here is our installer :)
 [Braintux Installer for Linux](https://drive.google.com/open?id=13uk496UbWeLyGZalAPeDNNiLDaJSxx5E)
 
 ### Windows

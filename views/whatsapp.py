@@ -199,7 +199,7 @@ class Whatsapp:
                 try:
                     # This is the result
                     speech = r.recognize_google(audio)
-                    speech = '/audio ' + speech
+                    speech = '/ ' + speech
                     # Removing the audio
                     files = os.listdir('audios')
                     for file in files:

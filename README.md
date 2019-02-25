@@ -29,7 +29,7 @@ Braintux is made by modules. **Everything are modules**. Some serve to make the 
 
 Coming soon...
 
-## To Do
+## Next Steps
 
 #### More View Modules
 

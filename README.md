@@ -34,26 +34,26 @@ Coming soon...
 
 #### More View Modules
 
-    * GUI using QT or GTK
-    * Web Interface
-    * Control by Slack
-    * Control by Telegram
-    * Control by Messenger
+* GUI using QT or GTK
+* Web Interface
+* Control by Slack
+* Control by Telegram
+* Control by Messenger
 
 #### More Non-View Modules
 
-    * Create modules to InfoSec
-        * Dir Brute
-        * Port Analysis with Auto Exploitation
-    * Create modules to Media Creators
-        * Auto Youtube Uploader (with nice key-words)
-    * Create modules to IOT
-        * DO EVERYTHING
-    * Create modules to DevOps
-        * Do routine activities
-    * Create modules to Office Work
-        * Excel automation
-        * Calendar with Todo
+* Create modules to InfoSec
+    * Dir Brute
+    * Port Analysis with Auto Exploitation
+* Create modules to Media Creators
+    * Auto Youtube Uploader (with nice key-words)
+* Create modules to IOT
+    * DO EVERYTHING
+* Create modules to DevOps
+    * Do routine activities
+* Create modules to Office Work
+    * Excel automation
+    * Calendar with Todo
 
 ## Contact
 

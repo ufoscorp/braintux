@@ -10,6 +10,11 @@ from selenium.webdriver.support import expected_conditions as ec
 from pynput.keyboard import Key, Controller
 import speech_recognition as sr
 
+if sys.platform=="linux" or sys.platform=="linux2" or sys.platform=="darwin":
+	installationPath="/opt/braintux-master"
+elif sys.platform=="nt":
+	installationPath=r"%ProgramFiles%/braintux-master"
+
 class Whatsapp:
 
     # Creating an instance of Whatsapp
@@ -54,7 +59,7 @@ class Whatsapp:
             profile = webdriver.FirefoxProfile()
             profile.set_preference("browser.download.folderList", 2)
             profile.set_preference("browser.download.manager.showWhenStarting", False)
-            profile.set_preference("browser.download.dir", os.getcwd()+'/audios')
+            profile.set_preference("browser.download.dir", installationPath+'/audios')
             profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "audio/ogg")
             try:
                 self.driver = webdriver.Firefox(firefox_profile=profile)
@@ -241,11 +246,11 @@ while executing:
     newMessage = whatsapp.checkNewMessage();
     if len(newMessage) > 0:
         if "/" in newMessage[0]:
-            p = subprocess.Popen("python3 {}/braintux-core.py {}".format(os.getcwd(), newMessage[1:]), shell=True)
+            p = subprocess.Popen("python3 {}/braintux-core.py {}".format(installationPath, newMessage[1:]), shell=True)
         
     # checking send new message
     try:
-        with open(os.getcwd()+"/chat.tmp", "r", os.O_NONBLOCK) as chat:
+        with open(installationPath+"/chat.tmp", "r", os.O_NONBLOCK) as chat:
             message = chat.read()
 
             if message != oldMessage:
@@ -256,7 +261,7 @@ while executing:
                     whatsapp.sendMessage(message[8:])
 
                 if messageType == "sendfile":
-                    whatsapp.send_attachment(os.getcwd() + '/' + message[8:])
+                    whatsapp.send_attachment(installationPath + '/' + message[8:])
             
             oldMessage = str(message)
     except:

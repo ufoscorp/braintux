@@ -2,6 +2,11 @@ import os, re, sys, subprocess
 import requests
 from pytube import YouTube
 
+if sys.platform=="linux" or sys.platform=="linux2" or sys.platform=="darwin":
+	installationPath="/opt/braintux-master"
+elif sys.platform=="nt":
+	installationPath=r"%ProgramFiles%/braintux-master"
+
 class Youtube:
 
     def __init__(self):
@@ -36,10 +41,10 @@ class Youtube:
         self.resultsDict=dict(zip(self.videoNames, self.links))
 
 def sendText(content):
-    subprocess.Popen("python3 {}/braintux-core.py sendtext '{}'".format(os.getcwd(), str(content)), shell=True)
+    subprocess.Popen("python3 {}/braintux-core.py sendtext '{}'".format(installationPath, str(content)), shell=True)
 
 def sendFile(content):
-    subprocess.Popen("python3 {}/braintux-core.py sendfile '{}'".format(os.getcwd(), str(content)), shell=True)
+    subprocess.Popen("python3 {}/braintux-core.py sendfile '{}'".format(installationPath, str(content)), shell=True)
 
 Youtube = Youtube()
 

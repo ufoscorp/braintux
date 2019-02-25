@@ -1,4 +1,9 @@
-import os, subprocess
+import os, subprocess, sys
+
+if sys.platform=="linux" or sys.platform=="linux2" or sys.platform=="darwin":
+	installationPath="/opt/braintux-master"
+elif sys.platform=="nt":
+	installationPath=r"%ProgramFiles%/braintux-master"
 
 class Terminal:
 
@@ -10,7 +15,6 @@ class Terminal:
         print("Braintux: "+title)
 
 terminal = Terminal()
-
 executing = True
 oldMessage = ""
 
@@ -18,7 +22,7 @@ while True:
 
     # checking send new message
     try:
-        with open(os.getcwd()+"/chat.tmp", "r", os.O_NONBLOCK) as chat:
+        with open(installationPath+"/chat.tmp", "r", os.O_NONBLOCK) as chat:
             message = chat.read()
             
             if message != oldMessage:
@@ -29,7 +33,7 @@ while True:
                     terminal.sendMessage(message[8:])
 
                 if messageType == "sendfile":
-                    terminal.sendMessage('New file in: ' + os.getcwd() + '/' + message[8:])
+                    terminal.sendMessage('New file in: ' + installationPath + '/' + message[8:])
             
             oldMessage = str(message)
     except:

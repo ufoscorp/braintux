@@ -12,7 +12,6 @@ if sys.platform=="linux" or sys.platform=="linux2" or sys.platform=="darwin":
 elif sys.platform=="nt":
 	installationPath=r"%ProgramFiles%/braintux-master"
 
-
 def textToView(content):
 
     with open(installationPath+"/chat.tmp", "w", os.O_NONBLOCK) as chat:

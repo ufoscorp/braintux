@@ -30,7 +30,7 @@ Braintux is made by modules. **Everything are modules**. Some of them serve to m
 
 Coming soon...
 
-## To Do
+## Next Steps
 
 #### More View Modules
 
@@ -57,9 +57,9 @@ Coming soon...
 
 ## Contact
 
-* Davi William - *Student*
-    * GitHub: **[Profile](https://github.com/daviwms999)**
-    * Email: **daviciencia1@gmail.com**
 * Pedro Cleto - *Student*
     * GitHub: **[Profile](https://github.com/cl3t0)**
-    * Email: **cl3t0.sh@gmail.com**
+    * Email: **cleto@rootsec.net**
+* Davi William - *Student*
+    * GitHub: **[Profile](https://github.com/daviwms999)**
+    * Email: **davi@rootsec.net**

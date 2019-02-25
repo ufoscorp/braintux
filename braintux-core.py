@@ -8,9 +8,9 @@ db = Database()
 modules = ["whatsapp", "youtube", "terminal"]
 views = ["whatsapp", "terminal"]
 if sys.platform=="linux" or sys.platform=="linux2" or sys.platform=="darwin":
-	installationPath="/opt/braintux"
+	installationPath="/opt/braintux-master"
 elif sys.platform=="nt":
-	installationPath=r"%ProgramFiles%/braintux"
+	installationPath=r"%ProgramFiles%/braintux-master"
 
 
 def textToView(content):

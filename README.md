@@ -4,7 +4,7 @@ Amazing automation for your life.
 
 ## Modules
 
-Braintux is made by modules. **Everything are modules**. Some serve to make the communication between Braintux and you, we call them by **views**.
+Braintux is made by modules. **Everything are modules**. Some of them serve to make the communication between Braintux and you, we call them by **views**.
 
 ### View Modules
 
@@ -12,18 +12,19 @@ Braintux is made by modules. **Everything are modules**. Some serve to make the 
     * You can see all the Braintux output in your terminal.
 * Whatsapp
     * You can control Braintux from your smartphone using WhatsApp, download files, with voice recognition and more.
+
 ## Non-View Modules
 
 ### Media
 
 * Youtube
-    * Download youtube videos in the simplest way. Together with the Whatsapp Module they form a powerful duo     .
+    * Download youtube videos in the simplest way. Together with the Whatsapp Module they form a powerful duo.
 
 ## Installation
 
 ### Linux
 
-[Braintux Installer for Linux](https://drive.google.com/open?id=13uk496UbWeLyGZalAPeDNNiLDaJSxx5E)
+[Braintux Installer for Linux](https://drive.google.com/open?id=1JID8XocJkOQlzVzrA-CqonZh4-b1bdff)
 
 ### Windows
 

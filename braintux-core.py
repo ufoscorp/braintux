@@ -7,10 +7,15 @@ from db import Database
 db = Database()
 modules = ["whatsapp", "youtube", "terminal"]
 views = ["whatsapp", "terminal"]
+if sys.platform=="linux" or sys.platform=="linux2" or sys.platform=="darwin":
+	installationPath="/opt/braintux"
+elif sys.platform=="nt":
+	installationPath=r"%ProgramFiles%/braintux"
+
 
 def textToView(content):
 
-    with open(os.getcwd()+"/chat.tmp", "w", os.O_NONBLOCK) as chat:
+    with open(installationPath+"/chat.tmp", "w", os.O_NONBLOCK) as chat:
 
         chat.write('sendtext')
         chat.write(content)
@@ -19,7 +24,7 @@ def textToView(content):
 
 def fileToView(content):
 
-    with open(os.getcwd()+"/chat.tmp", "w", os.O_NONBLOCK) as chat:
+    with open(installationPath+"/chat.tmp", "w", os.O_NONBLOCK) as chat:
 
         chat.write('sendfile')
         chat.write(content)
@@ -38,7 +43,7 @@ def kill(module):
 
 def help():
 
-    with open(os.getcwd()+"/help.txt", "r") as help:
+    with open(installationPath+"/help.txt", "r") as help:
         message = help.read()
         textToView(message)
 
@@ -52,7 +57,7 @@ if len(sys.argv) > 1:
                 if len(sys.argv) == 5:
                     if db.isUp("whatsapp") == False:
                         textToView("Starting Whatsapp. Don´t forget to scan the QR Code!")
-                        p = Popen("python3 {}/views/whatsapp.py start '{}' '{}'".format(os.getcwd(), sys.argv[3], sys.argv[4]), shell=True)
+                        p = Popen("python3 {}/views/whatsapp.py start '{}' '{}'".format(installationPath, sys.argv[3], sys.argv[4]), shell=True)
                         db.turnOn("whatsapp", p.pid)
                     else:
                         textToView("Whatsapp already running.")
@@ -74,7 +79,7 @@ if len(sys.argv) > 1:
             if sys.argv[2] == "start":
                 if db.isUp("terminal") == False:
                     textToView("Starting terminal.")
-                    p = Popen("python3 {}/views/terminal.py start".format(os.getcwd()), shell=True)
+                    p = Popen("python3 {}/views/terminal.py start".format(installationPath), shell=True)
                     db.turnOn("terminal", p.pid)
                 else:
                     textToView("terminal already running.")
@@ -91,12 +96,12 @@ if len(sys.argv) > 1:
         if len(sys.argv) > 2:
             if sys.argv[2] == "search":
                 if len(sys.argv) == 4:
-                    youtube=Popen("python3 {}/modules/youtube.py search '{}'".format(os.getcwd(), sys.argv[3]), shell=True)
+                    youtube=Popen("python3 {}/modules/youtube.py search '{}'".format(installationPath, sys.argv[3]), shell=True)
                 else:
                     textToView("Usage: braintux youtube search <term>")
             elif sys.argv[2] == "download":
                 if len(sys.argv) == 5:
-                    youtube=Popen("python3 {}/modules/youtube.py download '{}' '{}'".format(os.getcwd(), sys.argv[3], sys.argv[4]), shell=True)
+                    youtube=Popen("python3 {}/modules/youtube.py download '{}' '{}'".format(installationPath, sys.argv[3], sys.argv[4]), shell=True)
                 else:
                     textToView("Usage: braintux youtube download <term> <choice>")
             else:

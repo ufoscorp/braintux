@@ -59,7 +59,7 @@ Coming soon...
 
 * Pedro Cleto - *Student*
     * GitHub: **[Profile](https://github.com/cl3t0)**
-    * Email: **cleto@rootsec.net**
+    * Email: **pedro.cleto@rootsec.net**
 * Davi William - *Student*
     * GitHub: **[Profile](https://github.com/daviwms999)**
     * Email: **davi@rootsec.net**

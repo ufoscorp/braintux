@@ -32,12 +32,12 @@ Coming soon...
 
 ## Next Steps (To-Do list)
 
-- [ ] IoT
+- IoT
 	- [ ] Integration with adafruit.io and IFTTT
 	- [ ] Control motors 
 	- [ ] Turn lights on
 	- [ ] Integration with Home Assistant
-- [ ] Views integration
+- Views integration
 	 - [ ] Whatsapp Web
 	 - [ ] Telegram
 	 - [ ] Slack
@@ -45,20 +45,20 @@ Coming soon...
 	 - [ ] IFTTT
 	 - [x] QT/GTK UI
 	 - [ ] Web UI
-- [ ] Hacking/Sec Tools - Automation of:
+- Hacking/Sec Tools - Automation of:
 	 - [ ] OSINT - a LOT of web scraping
 	 - [ ] Vulnerability Identification
 	 - [ ] Exploitation
 	 - [ ] Post-Exploitation
 	 - [ ] Generation of reporting
-- [ ] Office tools
+- Office tools
 	 - [ ] Excel automation
 	 - [ ] Calendar with todo
-- [ ] Tools for content creators
+- Tools for content creators
 	 - [ ] Automation for video editing
 	 - [ ] Youtube Video Downloader
 	 - [ ] FFMPEG scripts
-- [ ] DevOps
+- DevOps
 	 - [ ] SSHFS Easy Setup
 	 - [ ] Commom Devops Tools Automation - Git, Terraform, Jenkins etc.
 

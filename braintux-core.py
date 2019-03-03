@@ -1,135 +1,143 @@
-#!/usr/bin/env python3
+# Braintux Core
 
-# Default imports
-import os, sys
-from subprocess import Popen
-from db import Database
-db = Database()
-modules = ["whatsapp", "youtube", "terminal"]
-views = ["whatsapp", "terminal"]
-if sys.platform=="linux" or sys.platform=="linux2" or sys.platform=="darwin":
-	installationPath="/opt/braintux-master"
-elif sys.platform=="nt":
-	installationPath=r"%ProgramFiles%/braintux-master"
+import os
+import zmq
+import sys
+import subprocess
 
-def textToView(content):
+from modules.terminal.parser import parse as terminalParser
+from modules.qt.parser import parse as qtParser
 
-    with open(installationPath+"/chat.tmp", "w", os.O_NONBLOCK) as chat:
+context = zmq.Context()
+socket = context.socket(zmq.REQ)
+socket.RCVTIMEO = 500
+socket.connect("tcp://127.0.0.1:8660")
 
-        chat.write('sendtext')
-        chat.write(content)
+if sys.platform == "linux" or sys.platform == "linux2" or sys.platform == "darwin":
+    root = "/opt/braintux-master"
+elif sys.platform == "nt":
+    root = r"%ProgramFiles%/braintux-master"
 
-        chat.close()
+ports = {"terminal":8650, "whatsapp":8651, "qt":8652}
+modules = ["whatsapp", "terminal", "youtube", "qt"]
+notInstantiableModules = ["youtube"]
+args = sys.argv
 
-def fileToView(content):
+with open("{}/help.txt".format(root), "r") as help:
+    help = help.read()
 
-    with open(installationPath+"/chat.tmp", "w", os.O_NONBLOCK) as chat:
+# Entering a command
+if len(args) > 1:
 
-        chat.write('sendfile')
-        chat.write(content)
+    command = args[1]
+    module = command
 
-        chat.close()
+    if command == "start":
+        # Start a module
+        if len(args) > 2:
+            module = args[2]
+            subprocess.Popen('python3 {}/modules/{}/start.py &'.format(root, module), shell=True)
 
-def kill(module):
+        else:
+            print("Usage: braintux start <module>")
 
-    PID = db.getPID(module)
-    if PID != False:
-        os.system("kill "+str(PID))
-        os.system("kill "+str(PID+1))
-        db.turnOff(module)
-    else:
-        textToView("{} aren't in our base.".format(module))
-
-def help():
-
-    with open(installationPath+"/help.txt", "r") as help:
-        message = help.read()
-        textToView(message)
-
-if len(sys.argv) > 1:
-
-    # args to modules
-    if sys.argv[1] == "whatsapp":
-        # access functions
-        if len(sys.argv) > 2:
-            if sys.argv[2] == "start":
-                if len(sys.argv) == 5:
-                    if db.isUp("whatsapp") == False:
-                        textToView("Starting Whatsapp. Don´t forget to scan the QR Code!")
-                        p = Popen("python3 {}/views/whatsapp.py start '{}' '{}'".format(installationPath, sys.argv[3], sys.argv[4]), shell=True)
-                        db.turnOn("whatsapp", p.pid)
-                    else:
-                        textToView("Whatsapp already running.")
-                else:
-                    textToView("Usage: braintux whatsapp start <browser> <group name>\n Example: braintux whatsapp start firefox 'my braintux'")
+    elif command == "stop":
+        # Stop a module
+        if len(args) > 2:
+            module = args[2]
+            port = ports[module]
             
-            elif sys.argv[2] == "stop" or sys.argv[2] == "kill":
-                kill("whatsapp")
-                textToView('Stopping whatsapp...')
-            else:
-                # function don't exist
-                textToView("This module don't have this function.")
+            socket = context.socket(zmq.REQ)
+            socket.RCVTIMEO = 500
+            socket.connect("tcp://localhost:{}".format(port))
+            socket.send_json(["stop"])
+            try:
+                socket.recv_json()[0]
+                print("{}: stopped.".format(module))
+            except:
+                print("{}: Off.".format(module))
+                
+            os._exit(0)
+
         else:
-            textToView("Usage: braintux whatsapp <function> [OPTIONS]\nfunctions: start, stop")
+            print("Usage: braintux stop <module>")
     
-    elif sys.argv[1] == "terminal":
-        # access functions
-        if len(sys.argv) > 2:
-            if sys.argv[2] == "start":
-                if db.isUp("terminal") == False:
-                    textToView("Starting terminal.")
-                    p = Popen("python3 {}/views/terminal.py start".format(installationPath), shell=True)
-                    db.turnOn("terminal", p.pid)
-                else:
-                    textToView("terminal already running.")
-            elif sys.argv[2] == "stop" or sys.argv[2] == "kill":
-                kill("terminal")
+    elif command == "ping":
+        # Ping a module
+        if len(args) > 2:
+            module = args[2]
+            port = ports[module]
+
+            socket = context.socket(zmq.REQ)
+            socket.RCVTIMEO = 500
+            socket.connect("tcp://localhost:{}".format(port))
+            socket.send_json(["ping"])
+            answered = False
+            try:
+                answer = socket.recv_json()[0]
+                answered = True
+            except:
+                answered = False
+            if answered:
+                print("On")
             else:
-                # function don't exist
-                textToView("This module don't have this function.")
+                print("Off")
+                os._exit(0)
         else:
-            textToView("Usage: braintux terminal <function> [OPTIONS]\nfunctions: start, stop")
+            exit("Usage: braintux ping <module>")
 
-    elif sys.argv[1] == "youtube":
-        # access functions
-        if len(sys.argv) > 2:
-            if sys.argv[2] == "search":
-                if len(sys.argv) == 4:
-                    youtube=Popen("python3 {}/modules/youtube.py search '{}'".format(installationPath, sys.argv[3]), shell=True)
-                else:
-                    textToView("Usage: braintux youtube search <term>")
-            elif sys.argv[2] == "download":
-                if len(sys.argv) == 5:
-                    youtube=Popen("python3 {}/modules/youtube.py download '{}' '{}'".format(installationPath, sys.argv[3], sys.argv[4]), shell=True)
-                else:
-                    textToView("Usage: braintux youtube download <term> <choice>")
-            else:
-                # function don't exist
-                textToView("This module don't have this function.")
+    elif command == "modules":
+        # Checking which module is enable
+        output = ""
+        output += "not Instantiable Modules:\n\n"
+        for module in notInstantiableModules:
+            output += "{}\n".format(module)
+        output += "\nInstantiable Modules:\n\n"
+        for module, port in ports.items():
+            
+            socket = context.socket(zmq.REQ)
+            socket.RCVTIMEO = 500
+            socket.connect("tcp://localhost:{}".format(port))
+            socket.send_json(["ping"])
+            try:
+                socket.recv_json()[0]
+                output += "{}: On.\n".format(module)
+            except:
+                output += "{}: Off.\n".format(module)
+            
+        print(output)
+        os._exit(0)
+    
+    elif command == "text":
+
+        if len(args) > 2:
+            message = args[2]
+
+            for module, port in ports.items():
+            
+                socket = context.socket(zmq.REQ)
+                socket.RCVTIMEO = 500
+                socket.connect("tcp://localhost:{}".format(port))
+                socket.send_json([message])
+                try:
+                    socket.recv_json()[0]
+                    print("{}: sent.".format(module))
+                except:
+                    print("{}: Off.".format(module))
+            
+            os._exit(0)
         else:
-            textToView("Usage: braintux youtube <function> [OPTIONS]\nfunctions: search, download")
-
-
-
-    # modules to view
-    elif sys.argv[1] == "sendtext":
-        message = sys.argv[2]
-        textToView(message)
+            print("Usage: braintux text")
     
-    elif sys.argv[1] == "sendfile":
-        file = sys.argv[2]
-        fileToView(file)
+    ### HERE WE HAVE MODULE ACCESS
 
-    # list modules
-    elif sys.argv[1] == "modules":
-        processes = db.listProcesses();
-        stringOfProcesses = 'Enabled Modules: \n'
-        for process in processes:
-            stringOfProcesses += process + '\n'
-        textToView(stringOfProcesses)
-    
+    elif module == "terminal":
+        # Access to terminal module
+        terminalParser(args)
+    elif module == "qt":
+        # Access to qt module
+        qtParser(args)
     else:
-        help()
-        
+        print(help)
 else:
-    help()
+    print(help)

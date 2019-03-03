@@ -4,7 +4,9 @@ Module access usage: braintux <module> <function> [OPTIONS]
     Options:
 
     help        Show this help message.
-    modules     Show all running modules (Modules have your own start/stop controllers).
+    modules     Show all running modules.
+    start       Start a module.
+    stop        Stop a module.
 
     Braintux are made by modules, so use them.
     Modules: youtube

@@ -30,36 +30,43 @@ Braintux is made by modules. **Everything are modules**. Some of them serve to m
 
 Coming soon...
 
-## Next Steps
+## Next Steps (To-Do list)
 
-#### More View Modules
-
-* GUI using QT or GTK
-* Web Interface
-* Control by Slack
-* Control by Telegram
-* Control by Messenger
-
-#### More Non-View Modules
-
-* Create modules to InfoSec
-    * Dir Brute
-    * Port Analysis with Auto Exploitation
-* Create modules to Media Creators
-    * Auto Youtube Uploader (with nice key-words)
-* Create modules to IOT
-    * DO EVERYTHING
-* Create modules to DevOps
-    * Do routine activities
-* Create modules to Office Work
-    * Excel automation
-    * Calendar with Todo
+- [ ] IoT
+ - [ ] Integration with adafruit.io and IFTTT
+	 - [ ] Control motors 
+	 - [ ] Turn lights on
+	 - [ ] Integration with Home Assistant
+- [ ] Views integration
+	 - [x] Whatsapp Web
+	 - [ ] Telegram
+	 - [ ] Slack
+	 - [ ] Messenger
+	 - [ ] IFTTT
+	 - [ ] QT/GTK UI
+	 - [ ] Web UI
+- [ ] Hacking/Sec Tools - Automation of:
+	 - [ ] OSINT - a LOT of web scraping
+	 - [ ] Vulnerability Identification
+	 - [ ] Exploitation
+	 - [ ] Post-Exploitation
+	 - [ ] Generation of reporting
+- [ ] Office tools
+	 - [ ] Excel automation
+	 - [ ] Calendar with todo
+- [ ] Tools for content creators
+	 - [ ] Automation for video editing
+	 - [x] Youtube Video Downloader
+	 - [ ] FFMPEG scripts
+- [ ] DevOps
+	 - [ ] SSHFS Easy Setup
+	 - [ ] Commom Devops Tools Automation - Git, Terraform, Jenkins etc.
 
 ## Contact
 
 * Pedro Cleto - *Student*
     * GitHub: **[Profile](https://github.com/cl3t0)**
-    * Email: **cleto@rootsec.net**
+    * Email: **pedro.cleto@rootsec.net**
 * Davi William - *Student*
     * GitHub: **[Profile](https://github.com/daviwms999)**
     * Email: **davi@rootsec.net**

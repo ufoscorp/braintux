@@ -33,17 +33,17 @@ Coming soon...
 ## Next Steps (To-Do list)
 
 - [ ] IoT
- - [ ] Integration with adafruit.io and IFTTT
-	 - [ ] Control motors 
-	 - [ ] Turn lights on
-	 - [ ] Integration with Home Assistant
+	- [ ] Integration with adafruit.io and IFTTT
+	- [ ] Control motors 
+	- [ ] Turn lights on
+	- [ ] Integration with Home Assistant
 - [ ] Views integration
-	 - [x] Whatsapp Web
+	 - [ ] Whatsapp Web
 	 - [ ] Telegram
 	 - [ ] Slack
 	 - [ ] Messenger
 	 - [ ] IFTTT
-	 - [ ] QT/GTK UI
+	 - [x] QT/GTK UI
 	 - [ ] Web UI
 - [ ] Hacking/Sec Tools - Automation of:
 	 - [ ] OSINT - a LOT of web scraping
@@ -56,7 +56,7 @@ Coming soon...
 	 - [ ] Calendar with todo
 - [ ] Tools for content creators
 	 - [ ] Automation for video editing
-	 - [x] Youtube Video Downloader
+	 - [ ] Youtube Video Downloader
 	 - [ ] FFMPEG scripts
 - [ ] DevOps
 	 - [ ] SSHFS Easy Setup
